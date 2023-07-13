@@ -26,4 +26,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EduHome.Core\EduHome.Core.csproj" />
+  </ItemGroup>
+
 </Project>

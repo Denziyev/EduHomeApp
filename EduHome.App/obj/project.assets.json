@@ -904,6 +904,19 @@
             "rid": "win"
           }
         }
+      },
+      "EduHome.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http": "2.2.2"
+        },
+        "compile": {
+          "bin/placeholder/EduHome.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EduHome.Core.dll": {}
+        }
       }
     }
   },
@@ -2251,10 +2264,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "EduHome.Core/1.0.0": {
+      "type": "project",
+      "path": "../EduHome.Core/EduHome.Core.csproj",
+      "msbuildProject": "../EduHome.Core/EduHome.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "EduHome.Core >= 1.0.0",
       "Microsoft.AspNetCore.Http >= 2.2.2",
       "Microsoft.EntityFrameworkCore >= 6.0.18",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.18",
@@ -2289,7 +2308,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.Core\\EduHome.Core.csproj": {
+              "projectPath": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.Core\\EduHome.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
