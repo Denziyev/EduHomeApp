@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ItZ56VWUcpdE0joPMVTB0ibRJpM8AhNEvI1a+NI+NIQ=",
+  "Hash": "/kRHFBWobHuN4TogmH6PHiJvWt5JmS5B/DGFuUaBeVQ=",
   "Source": "EduHome.App",
   "BasePath": "_content/EduHome.App",
   "Mode": "Default",
@@ -1037,23 +1037,6 @@
       "OriginalItemSpec": "wwwroot\\Admin\\images\\favicon.png"
     },
     {
-      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\Admin\\images\\logo.svg",
-      "SourceId": "EduHome.App",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\",
-      "BasePath": "_content/EduHome.App",
-      "RelativePath": "Admin/images/logo.svg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Admin\\images\\logo.svg"
-    },
-    {
       "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\Admin\\images\\logo-mini.svg",
       "SourceId": "EduHome.App",
       "SourceType": "Discovered",
@@ -1069,6 +1052,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Admin\\images\\logo-mini.svg"
+    },
+    {
+      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\Admin\\images\\logo.svg",
+      "SourceId": "EduHome.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\",
+      "BasePath": "_content/EduHome.App",
+      "RelativePath": "Admin/images/logo.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Admin\\images\\logo.svg"
     },
     {
       "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\Admin\\js\\.DS_Store",
@@ -1445,23 +1445,6 @@
       "OriginalItemSpec": "wwwroot\\Admin\\pages\\samples\\lock-screen.html"
     },
     {
-      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\Admin\\pages\\samples\\login.html",
-      "SourceId": "EduHome.App",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\",
-      "BasePath": "_content/EduHome.App",
-      "RelativePath": "Admin/pages/samples/login.html",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Admin\\pages\\samples\\login.html"
-    },
-    {
       "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\Admin\\pages\\samples\\login-2.html",
       "SourceId": "EduHome.App",
       "SourceType": "Discovered",
@@ -1479,12 +1462,12 @@
       "OriginalItemSpec": "wwwroot\\Admin\\pages\\samples\\login-2.html"
     },
     {
-      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\Admin\\pages\\samples\\register.html",
+      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\Admin\\pages\\samples\\login.html",
       "SourceId": "EduHome.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\",
       "BasePath": "_content/EduHome.App",
-      "RelativePath": "Admin/pages/samples/register.html",
+      "RelativePath": "Admin/pages/samples/login.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1493,7 +1476,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Admin\\pages\\samples\\register.html"
+      "OriginalItemSpec": "wwwroot\\Admin\\pages\\samples\\login.html"
     },
     {
       "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\Admin\\pages\\samples\\register-2.html",
@@ -1511,6 +1494,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Admin\\pages\\samples\\register-2.html"
+    },
+    {
+      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\Admin\\pages\\samples\\register.html",
+      "SourceId": "EduHome.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\",
+      "BasePath": "_content/EduHome.App",
+      "RelativePath": "Admin/pages/samples/register.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Admin\\pages\\samples\\register.html"
     },
     {
       "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\Admin\\pages\\tables\\.DS_Store",
@@ -1596,23 +1596,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Admin\\pages\\ui-features\\typography.html"
-    },
-    {
-      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\Admin\\scss\\.DS_Store",
-      "SourceId": "EduHome.App",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\",
-      "BasePath": "_content/EduHome.App",
-      "RelativePath": "Admin/scss/.DS_Store",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Admin\\scss\\.DS_Store"
     },
     {
       "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\Admin\\scss\\_background.scss",
@@ -1853,12 +1836,12 @@
       "OriginalItemSpec": "wwwroot\\Admin\\scss\\_vertical-wrapper.scss"
     },
     {
-      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\Admin\\scss\\components\\.DS_Store",
+      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\Admin\\scss\\.DS_Store",
       "SourceId": "EduHome.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\",
       "BasePath": "_content/EduHome.App",
-      "RelativePath": "Admin/scss/components/.DS_Store",
+      "RelativePath": "Admin/scss/.DS_Store",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1867,7 +1850,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Admin\\scss\\components\\.DS_Store"
+      "OriginalItemSpec": "wwwroot\\Admin\\scss\\.DS_Store"
     },
     {
       "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\Admin\\scss\\components\\_badges.scss",
@@ -2040,6 +2023,23 @@
       "OriginalItemSpec": "wwwroot\\Admin\\scss\\components\\_tables.scss"
     },
     {
+      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\Admin\\scss\\components\\.DS_Store",
+      "SourceId": "EduHome.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\",
+      "BasePath": "_content/EduHome.App",
+      "RelativePath": "Admin/scss/components/.DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Admin\\scss\\components\\.DS_Store"
+    },
+    {
       "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\Admin\\scss\\components\\plugin-overrides\\_data-tables.scss",
       "SourceId": "EduHome.App",
       "SourceType": "Discovered",
@@ -2072,23 +2072,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Admin\\scss\\landing-screens\\_auth.scss"
-    },
-    {
-      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\Admin\\scss\\mixins\\.DS_Store",
-      "SourceId": "EduHome.App",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\",
-      "BasePath": "_content/EduHome.App",
-      "RelativePath": "Admin/scss/mixins/.DS_Store",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Admin\\scss\\mixins\\.DS_Store"
     },
     {
       "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\Admin\\scss\\mixins\\_animation.scss",
@@ -2193,6 +2176,23 @@
       "OriginalItemSpec": "wwwroot\\Admin\\scss\\mixins\\_misc.scss"
     },
     {
+      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\Admin\\scss\\mixins\\.DS_Store",
+      "SourceId": "EduHome.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\",
+      "BasePath": "_content/EduHome.App",
+      "RelativePath": "Admin/scss/mixins/.DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Admin\\scss\\mixins\\.DS_Store"
+    },
+    {
       "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\Admin\\scss\\style.scss",
       "SourceId": "EduHome.App",
       "SourceType": "Discovered",
@@ -2278,23 +2278,6 @@
       "OriginalItemSpec": "wwwroot\\Admin\\vendors\\chart.js\\Chart.min.js"
     },
     {
-      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\Admin\\vendors\\datatables.net\\jquery.dataTables.js",
-      "SourceId": "EduHome.App",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\",
-      "BasePath": "_content/EduHome.App",
-      "RelativePath": "Admin/vendors/datatables.net/jquery.dataTables.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Admin\\vendors\\datatables.net\\jquery.dataTables.js"
-    },
-    {
       "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\Admin\\vendors\\datatables.net-bs4\\dataTables.bootstrap4.css",
       "SourceId": "EduHome.App",
       "SourceType": "Discovered",
@@ -2327,6 +2310,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Admin\\vendors\\datatables.net-bs4\\dataTables.bootstrap4.js"
+    },
+    {
+      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\Admin\\vendors\\datatables.net\\jquery.dataTables.js",
+      "SourceId": "EduHome.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\",
+      "BasePath": "_content/EduHome.App",
+      "RelativePath": "Admin/vendors/datatables.net/jquery.dataTables.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Admin\\vendors\\datatables.net\\jquery.dataTables.js"
     },
     {
       "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\Admin\\vendors\\mdi\\css\\materialdesignicons.min.css",
@@ -3145,6 +3145,40 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\banner\\banner.jpg"
     },
     {
+      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\blog\\blog-detail.jpg",
+      "SourceId": "EduHome.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\",
+      "BasePath": "_content/EduHome.App",
+      "RelativePath": "assets/img/blog/blog-detail.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\blog\\blog-detail.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\blog\\blog-img.jpg",
+      "SourceId": "EduHome.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\",
+      "BasePath": "_content/EduHome.App",
+      "RelativePath": "assets/img/blog/blog-img.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\blog\\blog-img.jpg"
+    },
+    {
       "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\blog\\blog1.jpg",
       "SourceId": "EduHome.App",
       "SourceType": "Discovered",
@@ -3298,12 +3332,12 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\blog\\blog9.jpg"
     },
     {
-      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\blog\\blog-detail.jpg",
+      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\choose\\choose-bd.jpg",
       "SourceId": "EduHome.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\",
       "BasePath": "_content/EduHome.App",
-      "RelativePath": "assets/img/blog/blog-detail.jpg",
+      "RelativePath": "assets/img/choose/choose-bd.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3312,24 +3346,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\blog\\blog-detail.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\blog\\blog-img.jpg",
-      "SourceId": "EduHome.App",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\",
-      "BasePath": "_content/EduHome.App",
-      "RelativePath": "assets/img/blog/blog-img.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\blog\\blog-img.jpg"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\choose\\choose-bd.jpg"
     },
     {
       "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\choose\\choose.png",
@@ -3347,23 +3364,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\choose\\choose.png"
-    },
-    {
-      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\choose\\choose-bd.jpg",
-      "SourceId": "EduHome.App",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\",
-      "BasePath": "_content/EduHome.App",
-      "RelativePath": "assets/img/choose/choose-bd.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\choose\\choose-bd.jpg"
     },
     {
       "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\contact\\contact1.png",
@@ -3415,6 +3415,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\contact\\contact3.png"
+    },
+    {
+      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\course\\course-bg.jpg",
+      "SourceId": "EduHome.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\",
+      "BasePath": "_content/EduHome.App",
+      "RelativePath": "assets/img/course/course-bg.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\course\\course-bg.jpg"
     },
     {
       "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\course\\course1.jpg",
@@ -3570,23 +3587,6 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\course\\course9.jpg"
     },
     {
-      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\course\\course-bg.jpg",
-      "SourceId": "EduHome.App",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\",
-      "BasePath": "_content/EduHome.App",
-      "RelativePath": "assets/img/course/course-bg.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\course\\course-bg.jpg"
-    },
-    {
       "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\course\\courses-details.jpg",
       "SourceId": "EduHome.App",
       "SourceType": "Discovered",
@@ -3602,6 +3602,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\course\\courses-details.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\event\\event-details.jpg",
+      "SourceId": "EduHome.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\",
+      "BasePath": "_content/EduHome.App",
+      "RelativePath": "assets/img/event/event-details.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\event\\event-details.jpg"
     },
     {
       "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\event\\event1.jpg",
@@ -3806,23 +3823,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\event\\event9.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\event\\event-details.jpg",
-      "SourceId": "EduHome.App",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\",
-      "BasePath": "_content/EduHome.App",
-      "RelativePath": "assets/img/event/event-details.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\event\\event-details.jpg"
     },
     {
       "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\event\\speaker1.jpg",
@@ -4318,6 +4318,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\teacher\\8a2cb20b-b0b6-47e6-b373-b44f5255fe0cBEVERLY CLARK.png"
     },
     {
+      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\teacher\\teacher-details.jpg",
+      "SourceId": "EduHome.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\",
+      "BasePath": "_content/EduHome.App",
+      "RelativePath": "assets/img/teacher/teacher-details.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\teacher\\teacher-details.jpg"
+    },
+    {
       "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\teacher\\teacher1.jpg",
       "SourceId": "EduHome.App",
       "SourceType": "Discovered",
@@ -4522,12 +4539,12 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\teacher\\teacher9.jpg"
     },
     {
-      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\teacher\\teacher-details.jpg",
+      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\testimonial\\testimonial-bg.jpg",
       "SourceId": "EduHome.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\",
       "BasePath": "_content/EduHome.App",
-      "RelativePath": "assets/img/teacher/teacher-details.jpg",
+      "RelativePath": "assets/img/testimonial/testimonial-bg.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -4536,7 +4553,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\teacher\\teacher-details.jpg"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\testimonial\\testimonial-bg.jpg"
     },
     {
       "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\testimonial\\testimonial.jpg",
@@ -4554,23 +4571,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\testimonial\\testimonial.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\testimonial\\testimonial-bg.jpg",
-      "SourceId": "EduHome.App",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\",
-      "BasePath": "_content/EduHome.App",
-      "RelativePath": "assets/img/testimonial/testimonial-bg.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\testimonial\\testimonial-bg.jpg"
     },
     {
       "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\js\\ajax-mail.js",
