@@ -9,6 +9,8 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Views\Home\" />
     <Folder Include="Areas\Admin\Views\Slider\" />
+    <Folder Include="areas\Admin\Views\SocialNetwork\" />
+    <Folder Include="areas\Admin\Views\Teacher\" />
     <Folder Include="wwwroot\Admin\" />
   </ItemGroup>
 

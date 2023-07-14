@@ -11,6 +11,9 @@ namespace EduHome.Core.Entities
     {
         [Required]
         public string Name { get; set; }
-        public List<TeacherSkills> TeacherSkills { get; set; }
+        [Required]
+        public string Percent { get; set; }
+        public int TeacherId { get; set; }
+        public Teacher? Teacher { get; set; }
     }
 }

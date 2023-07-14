@@ -2,7 +2,7 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-@model HomeViewModel
+@model HomeViewModel 
 
 
 		<!-- Background Area Start -->
@@ -63,7 +63,28 @@
         </div>
         <!-- Service End -->
         <!-- About Start -->
-   @await Html.PartialAsync("_AboutWelcomePartialView",Model.aboutWelcomes)
+<div class="about-area pb-155">
+    <div class="container">
+            <div class="row">
+            @foreach (var item in Model.aboutWelcomes)
+            {
+                <div class="col-md-6 col-sm-6">
+                    <div class="about-content">
+                        <h2>@item.Title</h2>
+                        <p>@item.Description1</p>
+                        <p class="hidden-sm">@item.Description2</p>
+                        <a class="default-btn" href="@item.Link">view courses</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="about-img">
+                        <img src="~/assets/img/about/@item.Image" alt="about">
+                    </div>
+                </div>
+            }
+            </div>
+    </div>
+</div>
         <!-- About End -->
         <!-- Courses Area Start -->
         <div class="courses-area two pt-150 pb-150 text-center">
@@ -265,28 +286,31 @@
         </div>
         <!-- Event Area End -->
         <!-- Testimonial Area Start -->
-        <div class="testimonial-area pt-110 pb-105 text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="testimonial-owl owl-theme owl-carousel">
-                        <div class="col-md-8 col-md-offset-2 col-sm-12">
-                            <div class="single-testimonial">
-                                <div class="testimonial-info">
-                                    <div class="testimonial-img">
-                                        <img src="~/assets/img/testimonial/testimonial.jpg" alt="testimonial">
-                                    </div>
-                                    <div class="testimonial-content">
-                                        <p>I must explain to you how all this mistaken idea of denoung pleure and praising pain was born and I will give you a coete account of the system, and expound the actual</p>
-                                        <h4>David Morgan</h4>
-                                        <h5>Student, CSE</h5>
-                                    </div>
+<div class="testimonial-area pt-110 pb-105 text-center">
+    <div class="container">
+        <div class="row">
+            <div class="testimonial-owl owl-theme owl-carousel">
+                <div class="col-md-8 col-md-offset-2 col-sm-12">
+                    <div class="single-testimonial">
+                        <div class="testimonial-info">
+                            @foreach (var item in Model.teachers)
+                            {
+                                <div class="testimonial-img">
+                                    <img src="~/assets/img/teacher/@item.Image" alt="@item.FullName">
                                 </div>
-                            </div>
-                        </div> 
+                                <div class="testimonial-content">
+                                    <p>@item.Description</p>
+                                    <h4>@item.FullName</h4>
+                                    <h5>@item.Position.Name</h5>
+                                </div>
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
         <!-- Testimonial Area End -->
         <!-- Blog Area Start -->
         <div class="blog-area pt-150 pb-150">

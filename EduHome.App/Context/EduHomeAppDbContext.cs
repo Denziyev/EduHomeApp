@@ -11,9 +11,9 @@ namespace EduHome.App.Context
         public DbSet<SocialNetwork> SocialNetworks { get; set; }
         public DbSet<Skills> Skills { get; set; }
         public DbSet<Position> Positions { get; set; }
+        public DbSet<Faculty> Faculties { get; set; }
 
-        public DbSet<TeacherSkills> TeacherSkills { get; set; }     
-        public EduHomeAppDxbContext(DbContextOptions<EduHomeAppDxbContext> options) : base(options)
+		public EduHomeAppDxbContext(DbContextOptions<EduHomeAppDxbContext> options) : base(options)
         {
 
         }

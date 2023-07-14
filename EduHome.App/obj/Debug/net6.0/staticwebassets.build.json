@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nquOCQ0Pxl4zt0lEOpKkuTIFJ683C7/UH4uWXuSIGCo=",
+  "Hash": "ItZ56VWUcpdE0joPMVTB0ibRJpM8AhNEvI1a+NI+NIQ=",
   "Source": "EduHome.App",
   "BasePath": "_content/EduHome.App",
   "Mode": "Default",
@@ -3094,6 +3094,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\about\\about.png"
     },
     {
+      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\about\\d4391d47-156f-4bcd-8e48-8a0e2c8124a5welcometoeduhomepng.png",
+      "SourceId": "EduHome.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\",
+      "BasePath": "_content/EduHome.App",
+      "RelativePath": "assets/img/about/d4391d47-156f-4bcd-8e48-8a0e2c8124a5welcometoeduhomepng.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\about\\d4391d47-156f-4bcd-8e48-8a0e2c8124a5welcometoeduhomepng.png"
+    },
+    {
       "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\about\\fb36a878-8c04-4c71-bac7-995df8087646FlowerPower.jpg",
       "SourceId": "EduHome.App",
       "SourceType": "Discovered",
@@ -4282,6 +4299,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\slider\\slider3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\teacher\\8a2cb20b-b0b6-47e6-b373-b44f5255fe0cBEVERLY CLARK.png",
+      "SourceId": "EduHome.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\",
+      "BasePath": "_content/EduHome.App",
+      "RelativePath": "assets/img/teacher/8a2cb20b-b0b6-47e6-b373-b44f5255fe0cBEVERLY CLARK.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\teacher\\8a2cb20b-b0b6-47e6-b373-b44f5255fe0cBEVERLY CLARK.png"
     },
     {
       "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\teacher\\teacher1.jpg",

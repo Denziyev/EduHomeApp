@@ -721,6 +721,10 @@
       "PackagePath": "staticwebassets\\assets\\img\\about\\about.png"
     },
     {
+      "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\about\\d4391d47-156f-4bcd-8e48-8a0e2c8124a5welcometoeduhomepng.png",
+      "PackagePath": "staticwebassets\\assets\\img\\about\\d4391d47-156f-4bcd-8e48-8a0e2c8124a5welcometoeduhomepng.png"
+    },
+    {
       "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\about\\fb36a878-8c04-4c71-bac7-995df8087646FlowerPower.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\about\\fb36a878-8c04-4c71-bac7-995df8087646FlowerPower.jpg"
     },
@@ -999,6 +1003,10 @@
     {
       "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\slider\\slider3.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\slider\\slider3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\teacher\\8a2cb20b-b0b6-47e6-b373-b44f5255fe0cBEVERLY CLARK.png",
+      "PackagePath": "staticwebassets\\assets\\img\\teacher\\8a2cb20b-b0b6-47e6-b373-b44f5255fe0cBEVERLY CLARK.png"
     },
     {
       "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\teacher\\teacher-details.jpg",

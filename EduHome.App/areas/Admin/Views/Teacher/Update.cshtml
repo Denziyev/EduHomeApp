@@ -1,0 +1,74 @@
+﻿@model Teacher
+
+<div class="container">
+	<form method="post" enctype="multipart/form-data">
+		<div class="form-group">
+			<label asp-for="@Model.FullName">FullName:</label>
+			<input type="text" class="form-control" asp-for="@Model.FullName" />
+
+		</div>
+		<div class="form-group">
+			<label asp-for="@Model.FormFile">File:</label>
+			<input type="file" class="form-control" asp-for="@Model.FormFile" />
+		</div>
+		<div class="form-group">
+			<label asp-for="@Model.Description">Description:</label>
+			<input type="text" class="form-control" asp-for="@Model.Description" />
+
+		</div>
+
+		<div class="form-group">
+			<label asp-for="@Model.Degree">Degree:</label>
+			<input type="text" class="form-control" asp-for="@Model.Degree" />
+
+		</div>
+		<div class="form-group">
+			<label asp-for="@Model.Experience">Experience:</label>
+			<input type="number" class="form-control" asp-for="@Model.Experience" />
+
+		</div>
+		<div class="form-group">
+			<label asp-for="@Model.Hobbies">Hobbies:</label>
+			<input type="text" class="form-control" asp-for="@Model.Hobbies" />
+
+		</div>
+		<div class="form-group">
+			<select asp-for="FacultyId" class="form-select" aria-label="Default select example">
+				<option selected>Choose one of them</option>
+				@foreach (var item in ViewBag.Faculties)
+				{
+					<option value="@item.Id">@item.Name</option>
+
+				}
+			</select>
+		</div>
+		<div class="form-group">
+			<select asp-for="PositionId" class="form-select" aria-label="Default select example">
+				<option selected>Choose one of them</option>
+				@foreach (var item in ViewBag.Positions)
+				{
+					<option value="@item.Id">@item.Name</option>
+
+				}
+			</select>
+		</div>
+		<div class="form-group">
+			<label asp-for="@Model.Mail">Mail:</label>
+			<input type="email" class="form-control" asp-for="@Model.Mail" />
+
+		</div>
+		<div class="form-group">
+			<label asp-for="@Model.Phone">Phone:</label>
+			<input type="text" class="form-control" asp-for="@Model.Phone" />
+
+		</div>
+		<div class="form-group">
+			<label asp-for="@Model.Skype">Skype:</label>
+			<input type="text" class="form-control" asp-for="@Model.Skype" />
+
+		</div>
+		<img style="width:100px;height:100px" src="~/assets/img/teacher/@Model.Image" />
+		@Html.AntiForgeryToken()
+		<button type="submit">Update</button>
+	</form>
+</div>

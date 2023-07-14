@@ -21,9 +21,8 @@ namespace EduHome.Core.Entities
 
         public int Experience { get; set; }
 
-        public string Hobbies { get;set; }
+        public string? Hobbies { get;set; }
 
-        public string Faculty { get; set; }
         public string Mail { get; set; }
 
         public string Phone { get; set; }
@@ -35,8 +34,11 @@ namespace EduHome.Core.Entities
         public int PositionId { get; set; }
         public Position? Position { get; set; }
 
+        public int FacultyId { get; set; }
+        public Faculty? Faculty { get; set; }
+
         public List<SocialNetwork>? SocialNetworks { get; set; }
-        public List<TeacherSkills> TeacherSkills { get; set; }
+        public List<Skills>? Skills { get; set; }
 
         [NotMapped]
         public IFormFile? FormFile { get; set; }

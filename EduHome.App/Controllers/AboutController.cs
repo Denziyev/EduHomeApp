@@ -1,12 +1,30 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using EduHome.App.Context;
+using EduHome.App.ViewModels;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace EduHome.App.Controllers
 {
 	public class AboutController : Controller
 	{
-		public IActionResult Index()
-		{
-			return View();
-		}
-	}
+        private readonly EduHomeAppDxbContext _context;
+
+        public AboutController(EduHomeAppDxbContext context)
+        {
+            _context = context;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            HomeViewModel homeViewModel = new HomeViewModel()
+            {
+                aboutWelcomes = await _context.AboutWelcomes.Where(x => !x.IsDeleted).ToListAsync(),
+                teachers = await _context.Teachers.Where(x => !x.IsDeleted).Include(x=>x.Position).Where(x=>!x.IsDeleted).
+                Include(x => x.SocialNetworks).Where(x => !x.IsDeleted).
+                Include(x => x.Faculty).Where(x => !x.IsDeleted).
+                Include(x => x.Skills).Where(x => !x.IsDeleted).ToListAsync()
+            };
+            return View(homeViewModel);
+        }
+    }
 }

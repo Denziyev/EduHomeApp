@@ -1,0 +1,36 @@
+﻿@model Skills
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<div class="container">
+    <form method="post" enctype="multipart/form-data">
+
+        <div class="form-group">
+            <select class="form-select" asp-for="TeacherId" aria-label="Disabled select example">
+                <option selected>Choose Employee</option>
+                @foreach (var item in ViewBag.Teachers)
+                {
+                    <option value="@item.Id">@item.FullName</option>
+                }
+
+            </select>
+            <span class="alert-danger" asp-validation-for="TeacherId"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Name">Name</label>
+            <input type="text" class="form-control" asp-for="@Model.Name">
+            <span class="alert-danger" asp-validation-for="Name"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Percent">Percent(%)</label>
+            <input type="text" class="form-control" asp-for="@Model.Percent">
+            <span class="alert-danger" asp-validation-for="Percent"></span>
+        </div>
+
+
+
+       
+        @Html.AntiForgeryToken()
+        <button type="submit">Create</button>
+    </form>
+</div>
