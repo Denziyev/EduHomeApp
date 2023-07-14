@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jFopLtpGm+hLC1Gs/JdiKiyKLKVY9+AqlvXbXC01kf4=",
+  "Hash": "nquOCQ0Pxl4zt0lEOpKkuTIFJ683C7/UH4uWXuSIGCo=",
   "Source": "EduHome.App",
   "BasePath": "_content/EduHome.App",
   "Mode": "Default",
@@ -3094,6 +3094,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\about\\about.png"
     },
     {
+      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\about\\fb36a878-8c04-4c71-bac7-995df8087646FlowerPower.jpg",
+      "SourceId": "EduHome.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\",
+      "BasePath": "_content/EduHome.App",
+      "RelativePath": "assets/img/about/fb36a878-8c04-4c71-bac7-995df8087646FlowerPower.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\about\\fb36a878-8c04-4c71-bac7-995df8087646FlowerPower.jpg"
+    },
+    {
       "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\banner\\banner.jpg",
       "SourceId": "EduHome.App",
       "SourceType": "Discovered",
@@ -4046,6 +4063,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\post\\post3.jpg"
     },
     {
+      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\slider\\0f097596-7932-485b-a8d8-4f38fc146829slider2.jpg",
+      "SourceId": "EduHome.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\",
+      "BasePath": "_content/EduHome.App",
+      "RelativePath": "assets/img/slider/0f097596-7932-485b-a8d8-4f38fc146829slider2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\slider\\0f097596-7932-485b-a8d8-4f38fc146829slider2.jpg"
+    },
+    {
       "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\slider\\5107350c-332b-43b5-88a7-2d4a406e3778slider1.jpg",
       "SourceId": "EduHome.App",
       "SourceType": "Discovered",
@@ -4078,6 +4112,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\slider\\6004bf97-e5e5-44b6-948f-6d52898662acWildRoses.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\slider\\7978c13b-4903-43b9-baf9-ddf2553571e7slider3.jpg",
+      "SourceId": "EduHome.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\",
+      "BasePath": "_content/EduHome.App",
+      "RelativePath": "assets/img/slider/7978c13b-4903-43b9-baf9-ddf2553571e7slider3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\slider\\7978c13b-4903-43b9-baf9-ddf2553571e7slider3.jpg"
     },
     {
       "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\slider\\821f7227-2ad4-4164-bce9-d4d7fbda6b60WildRoses.jpg",

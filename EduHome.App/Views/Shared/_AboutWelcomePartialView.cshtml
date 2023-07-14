@@ -1,0 +1,25 @@
+﻿@model List<AboutWelcome>
+
+
+    <div class="about-area pb-155">
+        <div class="container">
+            @foreach (var item in Model)
+            {
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="about-content">
+                        <h2>@item.Title</h2>
+                        <p>@item.Description1</p>
+                        <p class="hidden-sm">@item.Description2</p>
+                        <a class="default-btn" href="@item.Link">view courses</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="about-img">
+                        <img src="~/assets/img/about/@item.Image" alt="about">
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </div>

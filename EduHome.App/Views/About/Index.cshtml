@@ -1,4 +1,6 @@
-﻿        <!-- Banner Area Start -->
+﻿
+@model HomeViewModel
+        <!-- Banner Area Start -->
 <div class="banner-area-wrapper">
     <div class="banner-area text-center">
         <div class="container">
@@ -16,25 +18,7 @@
 </div>
 <!-- Banner Area End -->
 <!-- About Start -->
-<div class="about-area pt-145 pb-155">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-sm-6">
-                <div class="about-content">
-                    <h2>WELCOME TO <span>EDUHOME</span></h2>
-                    <p>I must explain to you how all this mistaken idea of denouncing pleure and prsing pain was born and I will give you a complete account of the system, and expound the actual teachings  the master-builder of humanit happiness</p>
-                    <p class="hidden-sm">I must explain to you how all this mistaken idea of denouncing pleure and prsing pain was born and I will give you a complete account of the system</p>
-                    <a class="default-btn" href="#">view courses</a>
-                </div>
-            </div>
-            <div class="col-md-6 col-sm-6">
-                <div class="about-img">
-                    <img src="~/assets/img/about/about.png" alt="about">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+@await Html.PartialAsync("_AboutWelcomePartialView",Model.aboutWelcomes)
 <!-- About End -->
 <!-- Teacher Start -->
 <div class="teacher-area pb-150">
