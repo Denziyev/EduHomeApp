@@ -1,0 +1,36 @@
+﻿@model List<Feature>
+<div class="container">
+    <table class="table table-sm">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Start</th>
+                <th scope="col">Duration</th>
+                <th scope="col">Class Duration</th>
+                <th scope="col">Language</th>
+                <th scope="col">Fee</th>
+                <th scope="col">Update</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row">@item.Id</th>
+                    <th scope="row">@item.Start</th>
+                    <th scope="row">@item.Duration</th>
+                    <th scope="row">@item.ClassDuration</th>
+                    <th scope="row">@item.Language</th>
+                    <th scope="row">@item.Fee</th>
+                    <td><a asp-controller="feature" asp-action="update" asp-route-id="@item.Id"><i class="fas fa-edit text text-primary"></i></a></td>
+                    <td><a onclick="if (!confirm('Are you sure to delete?')){return false;}" asp-controller="feature" asp-action="delete" asp-route-id="@item.Id" class="delete-item"><i class="fas fa-trash text text-danger"></i></a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div>
+        <a asp-controller="feature" asp-action="create" style="display: block; text-decoration: none; color: white; width: 100%; height: 100%"> <div style="width:100%; " class="btn btn-outline-success">Add feature for Any Course </div></a>
+    </div>
+
+</div>

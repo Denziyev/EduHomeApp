@@ -1,0 +1,67 @@
+﻿@model Feature
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<div class="container">
+    <form method="post" enctype="multipart/form-data">
+
+        <div class="form-group">
+            <select class="form-select" asp-for="CourseId" aria-label="Disabled select example">
+                <option selected>Choose Course</option>
+                @foreach (var item in ViewBag.Courses)
+                {
+                    <option value="@item.Id">@item.Course</option>
+                }
+
+            </select>
+            <span class="alert-danger" asp-validation-for="CourseId"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Start">Start</label>
+            <input type="date" class="form-control" asp-for="@Model.Start">
+            <span class="alert-danger" asp-validation-for="Start"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Duration">Duration(Month)</label>
+            <input type="number" class="form-control" asp-for="@Model.Duration">
+            <span class="alert-danger" asp-validation-for="Duration"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ClassDuration">ClassDuration</label>
+            <input type="number" class="form-control" asp-for="@Model.ClassDuration">
+            <span class="alert-danger" asp-validation-for="ClassDuration"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="SkillLevel">SkillLevel</label>
+            <input type="text" class="form-control" asp-for="@Model.SkillLevel">
+            <span class="alert-danger" asp-validation-for="SkillLevel"></span>
+        </div>
+           <div class="form-group">
+            <label asp-for="Language">Language</label>
+            <input type="text" class="form-control" asp-for="@Model.Language">
+            <span class="alert-danger" asp-validation-for="Language"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="StudentCount">StudentCount</label>
+            <input type="number" class="form-control" asp-for="@Model.StudentCount">
+            <span class="alert-danger" asp-validation-for="StudentCount"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Assestments">Assestments</label>
+            <input type="text" class="form-control" asp-for="@Model.Assestments">
+            <span class="alert-danger" asp-validation-for="Assestments"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Fee">Fee($)</label>
+            <input type="number" class="form-control" asp-for="@Model.Fee">
+            <span class="alert-danger" asp-validation-for="Fee"></span>
+        </div>
+
+
+
+
+        @Html.AntiForgeryToken()
+        <button type="submit">Create</button>
+    </form>
+</div>
