@@ -1,0 +1,65 @@
+﻿@model Blog
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<div class="container">
+    <form method="post" enctype="multipart/form-data">
+
+        <div class="form-group">
+            <select class="form-select" asp-for="CategoryId" aria-label="Disabled select example">
+                <option selected>Choose Category</option>
+                @foreach (var item in ViewBag.Categories)
+                {
+                    <option value="@item.Id">@item.Name</option>
+                }
+
+            </select>
+            <span class="alert-danger" asp-validation-for="CategoryId"></span>
+        </div>
+
+        <div class="form-group">
+            <select multiple class="form-select" asp-for="TagIds" aria-label="Disabled select example">
+                <option selected>Choose Tags</option>
+                @foreach (var item in ViewBag.Tags)
+                {
+                    <option value="@item.Id">@item.Name</option>
+                }
+
+            </select>
+            <span class="alert-danger" asp-validation-for="TagIds"></span>
+        </div>
+
+
+
+        <div class="form-group">
+            <label asp-for="Title">Title</label>
+            <input type="text" class="form-control" asp-for="@Model.Title">
+            <span class="alert-danger" asp-validation-for="Title"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="FormFile">Image</label>
+            <input accept="image/*" type="file" class="form-control" asp-for="FormFile">
+            <span class="alert-danger" asp-validation-for="FormFile"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Time">Time</label>
+            <input type="date" class="form-control" asp-for="@Model.Time">
+            <span class="alert-danger" asp-validation-for="Time"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Writer">Writer</label>
+            <input type="text" class="form-control" asp-for="@Model.Writer">
+            <span class="alert-danger" asp-validation-for="Writer"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Content">Content</label>
+            <input type="text" class="form-control" asp-for="@Model.Content">
+            <span class="alert-danger" asp-validation-for="Content"></span>
+        </div>
+       
+        @Html.AntiForgeryToken()
+        <button type="submit">Create</button>
+    </form>
+</div>
