@@ -1,0 +1,85 @@
+﻿@model AppUser
+<!-- Banner Area Start -->
+<div class="banner-area-wrapper">
+    <div class="banner-area text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="banner-content-wrapper">
+                        <div class="banner-content">
+                            <h2>login</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Banner Area End -->
+<!-- Login start -->
+<div class="login-area pt-150 pb-150">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center">
+                <div class="login">
+                    <div class="login-form-container">
+                        <div class="login-text">
+                            <h2>Info</h2>
+                            <span>Please login using account detail bellow.</span>
+                        </div>
+                        <div class="login-form">
+                            <div class="alert alert-danger" asp-validation-summary="ModelOnly"></div>
+                            <form action="#" method="post">
+
+                                <div class="d-flex flex-row align-items-center mb-4">
+                                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                                    <div class="form-outline flex-fill mb-0">
+                                        <input disabled asp-for="Name" class="form-control" />
+                                        <label class="form-label" asp-for="Name"></label>
+                                    </div>
+                                    <span class="text text-danger" asp-validation-for="Name"></span>
+                                </div>
+                                <div class="d-flex flex-row align-items-center mb-4">
+                                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                                    <div class="form-outline flex-fill mb-0">
+                                        <input disabled asp-for="Surname" class="form-control" />
+                                        <label class="form-label" asp-for="Surname"></label>
+                                    </div>
+                                    <span class="text text-danger" asp-validation-for="Surname"></span>
+
+                                </div>
+                                <div class="d-flex flex-row align-items-center mb-4">
+                                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                                    <div class="form-outline flex-fill mb-0">
+                                        <input disabled asp-for="Email" class="form-control" />
+                                        <label class="form-label" asp-for="Email"></label>
+                                    </div>
+                                    <span class="text text-danger" asp-validation-for="Email"></span>
+
+                                </div>
+                                <div class="d-flex flex-row align-items-center mb-4">
+                                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                                    <div class="form-outline flex-fill mb-0">
+                                        <input disabled asp-for="UserName" class="form-control" />
+                                        <label class="form-label" asp-for="UserName"></label>
+                                    </div>
+                                    <span class="text text-danger" asp-validation-for="UserName"></span>
+
+                                </div>
+                                <div class="button-box">
+                                    <div class="login-toggle-btn">
+                                        <input type="checkbox" id="remember">
+                                        <label for="remember">Remember me</label>
+                                        <a href="#">Forgot Password?</a>
+                                    </div>
+                                    <button type="submit" class="default-btn">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Login end --> 
