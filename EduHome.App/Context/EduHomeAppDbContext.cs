@@ -33,9 +33,9 @@ namespace EduHome.App.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Course>()
-                .HasOne(e => e.Feature)
-            .WithOne(e => e.Course)
-                .HasForeignKey<Feature>();
+                .HasOne(a => a.Feature)
+                .WithOne(b => b.Course)
+                .HasForeignKey<Feature>(b => b.CourseId);
         }
     }
 }
