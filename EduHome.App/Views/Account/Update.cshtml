@@ -1,0 +1,68 @@
+﻿@model UserUpdateViewModel
+<div class="banner-area-wrapper">
+            <div class="banner-area text-center">	
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="banner-content-wrapper">
+                                <div class="banner-content">
+                                    <h2>sign up</h2> 
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+		<!-- Banner Area End -->
+        <!-- Register start -->
+        <div class="register-area pt-150 pb-150">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center">
+                        <div class="login">
+                            <div class="login-form-container">
+                                <div class="login-text">
+                                    <h2>sign up</h2>
+                                    <span>Please register now.</span>
+                                </div>
+                                <div class="login-form">
+                                    <form action="#" method="post">
+                                           <div class="form-outline flex-fill mb-0">
+                                            <input asp-for="Name" class="form-control" placeholder="Name" />
+                                        </div>
+                                        <span class="text text-danger" asp-validation-for="Name"></span>
+
+                                            <div class="form-outline flex-fill mb-0">
+                                            <input asp-for="Surname" class="form-control" placeholder="Surname" />
+                                        </div>
+                                        <span class="text text-danger" asp-validation-for="Surname"></span>
+                                
+                                           <div class="form-outline flex-fill mb-0">
+                                            <input asp-for="UserName" class="form-control" placeholder="UserName" />
+                                        </div>
+                                        <span class="text text-danger" asp-validation-for="UserName"></span>
+
+
+                                           <div class="form-outline flex-fill mb-0">
+                                            <input asp-for="Email" class="form-control" placeholder="Email" />
+                                        </div>
+                                        <span class="text text-danger" asp-validation-for="Email"></span>
+
+                                        <div class="button-box">
+                                            <div class="login-toggle-btn">
+                                                <input type="checkbox" id="remember">
+                                                <label for="remember">Remember me</label>
+                                                <a asp-controller="account" asp-action="forgetpassword">Forgot Password?</a>
+                                              
+                                            </div>
+                                            <button type="submit" class="default-btn">Update</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
