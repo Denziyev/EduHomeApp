@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Blog>
+
+<div class="row">
+    @foreach (var item in Model.Take(3))
+    {
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="single-blog">
+                <div class="blog-img">
+                    <a href="~/blog/detail/@item.Id"><img src="~/assets/img/blog/@item.Image" alt="blog"></a>
+                    <div class="blog-hover">
+                        <a href="~/blog/detail/@item.Id"><i class="fa fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-top">
+                        <p>By @item.Writer  /  @item.Time?.ToString("MMMM d, yyyy") /  <i class="fa fa-comments-o"></i> 4</p>
+                    </div>
+                    <div class="blog-bottom">
+                        <h2><a href="~/blog/detail/@item.Id">@item.Title </a></h2>
+                        <a href="~/blog/detail/@item.Id">read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
