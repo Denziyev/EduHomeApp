@@ -1,7 +1,9 @@
 ﻿using EduHome.App.Context;
 using EduHome.App.Extentions;
 using EduHome.App.Helpers;
+using EduHome.App.Services.Interfaces;
 using EduHome.Core.Entities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,11 +14,15 @@ namespace EduHome.App.Areas.Admin.Controllers
     {
         private readonly EduHomeAppDxbContext _context;
         private readonly IWebHostEnvironment _env;
+        private readonly IMailService _mailService;
 
-        public BlogController(EduHomeAppDxbContext context, IWebHostEnvironment env)
+
+
+        public BlogController(EduHomeAppDxbContext context, IWebHostEnvironment env, IMailService mailService)
         {
             _context = context;
             _env = env;
+            _mailService = mailService;
         }
 
         public async Task<IActionResult> Index()
@@ -67,6 +73,24 @@ namespace EduHome.App.Areas.Admin.Controllers
                 };
                 await _context.BlogTags.AddAsync(BlogTag);
             }
+
+            //email gondermek yenilik haqqinda
+            List<Subscribe> subscribers = await _context.Subscribes.Where(x => !x.IsDeleted).ToListAsync();
+
+            foreach(var item in subscribers)
+            {
+                //string token = await _userManager.GeneratePasswordResetTokenAsync(item);
+
+                UriBuilder uriBuilder = new UriBuilder();
+
+                var link = Url.Action(action: "index", controller: "~/Home/",
+                    values: new { email = item.Email },
+                    protocol: Request.Scheme);
+
+                await _mailService.Send("ilkinhd@code.edu.az", item.Email, link, "New Blog","Click me for New Blog");
+            }
+
+
             await _context.Blogs.AddAsync(Blog);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
@@ -78,7 +102,8 @@ namespace EduHome.App.Areas.Admin.Controllers
         {
             ViewBag.Categories = await _context.Categories.Where(x => !x.IsDeleted).ToListAsync();
             ViewBag.Tags = await _context.Tags.Where(x => !x.IsDeleted).ToListAsync();
-         
+           
+
 
             Blog? Blog = await _context.Blogs.
                 Where(x => !x.IsDeleted && x.Id == id).

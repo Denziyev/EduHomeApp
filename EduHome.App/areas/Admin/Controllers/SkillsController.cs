@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
-namespace Arsha.App.Areas.Admin.Controllers
+namespace EduHome.App.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class SkillsController : Controller

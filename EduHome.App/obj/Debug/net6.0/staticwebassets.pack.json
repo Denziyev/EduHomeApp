@@ -733,6 +733,26 @@
       "PackagePath": "staticwebassets\\assets\\img\\banner\\banner.jpg"
     },
     {
+      "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\blog\\081a931b-8fb7-4d08-b213-3a4b6f4910c7download (3).jfif",
+      "PackagePath": "staticwebassets\\assets\\img\\blog\\081a931b-8fb7-4d08-b213-3a4b6f4910c7download (3).jfif"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\blog\\34bb7149-d65a-4791-883d-d1b55d62ff07Amanda Jepson.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\blog\\34bb7149-d65a-4791-883d-d1b55d62ff07Amanda Jepson.jpg"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\blog\\589b9728-815c-44f1-90ef-4dddc7df736eblog1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\blog\\589b9728-815c-44f1-90ef-4dddc7df736eblog1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\blog\\90a5dc0d-f72e-4cd2-8d34-25fbbee03639download (3).jfif",
+      "PackagePath": "staticwebassets\\assets\\img\\blog\\90a5dc0d-f72e-4cd2-8d34-25fbbee03639download (3).jfif"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\blog\\98c04926-94e0-4424-aced-19e8f50b0d26Amanda Jepson.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\blog\\98c04926-94e0-4424-aced-19e8f50b0d26Amanda Jepson.jpg"
+    },
+    {
       "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\blog\\blog-detail.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\blog\\blog-detail.jpg"
     },
@@ -777,6 +797,18 @@
       "PackagePath": "staticwebassets\\assets\\img\\blog\\blog9.jpg"
     },
     {
+      "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\blog\\d7cebd42-a863-4586-9755-6004f7e17138download.jfif",
+      "PackagePath": "staticwebassets\\assets\\img\\blog\\d7cebd42-a863-4586-9755-6004f7e17138download.jfif"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\blog\\e18b05c2-e601-44ba-9df5-7beace34eda9Amanda Jepson.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\blog\\e18b05c2-e601-44ba-9df5-7beace34eda9Amanda Jepson.jpg"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\blog\\f99e7141-5f20-486b-90fe-946be97a63b4download (3).jfif",
+      "PackagePath": "staticwebassets\\assets\\img\\blog\\f99e7141-5f20-486b-90fe-946be97a63b4download (3).jfif"
+    },
+    {
       "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\choose\\choose-bd.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\choose\\choose-bd.jpg"
     },
@@ -795,6 +827,14 @@
     {
       "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\contact\\contact3.png",
       "PackagePath": "staticwebassets\\assets\\img\\contact\\contact3.png"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\course\\2e92316b-17d8-4567-b712-d8aa50849686download (3).jfif",
+      "PackagePath": "staticwebassets\\assets\\img\\course\\2e92316b-17d8-4567-b712-d8aa50849686download (3).jfif"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\course\\a9a6ee1f-c497-4973-9f30-a87ac88199e6BEVERLY CLARK.png",
+      "PackagePath": "staticwebassets\\assets\\img\\course\\a9a6ee1f-c497-4973-9f30-a87ac88199e6BEVERLY CLARK.png"
     },
     {
       "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\course\\course-bg.jpg",
@@ -839,6 +879,22 @@
     {
       "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\course\\courses-details.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\course\\courses-details.jpg"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\course\\d87e4c20-707b-4cb1-b1c0-3ac146570e71download (2).jfif",
+      "PackagePath": "staticwebassets\\assets\\img\\course\\d87e4c20-707b-4cb1-b1c0-3ac146570e71download (2).jfif"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\course\\d958b431-9944-4bef-9d1d-ae9d142c002adownload (2).jfif",
+      "PackagePath": "staticwebassets\\assets\\img\\course\\d958b431-9944-4bef-9d1d-ae9d142c002adownload (2).jfif"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\course\\e30faf20-e2d4-4b4d-b7d6-308a118a6569download.jfif",
+      "PackagePath": "staticwebassets\\assets\\img\\course\\e30faf20-e2d4-4b4d-b7d6-308a118a6569download.jfif"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\course\\e61a8902-cda9-4c35-afd1-b2e626bd6846download.jfif",
+      "PackagePath": "staticwebassets\\assets\\img\\course\\e61a8902-cda9-4c35-afd1-b2e626bd6846download.jfif"
     },
     {
       "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\event\\event-details.jpg",
@@ -1007,6 +1063,22 @@
     {
       "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\teacher\\8a2cb20b-b0b6-47e6-b373-b44f5255fe0cBEVERLY CLARK.png",
       "PackagePath": "staticwebassets\\assets\\img\\teacher\\8a2cb20b-b0b6-47e6-b373-b44f5255fe0cBEVERLY CLARK.png"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\teacher\\8e0cc410-7792-40f1-9d26-849d96592fe8STUART KELVIN.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\teacher\\8e0cc410-7792-40f1-9d26-849d96592fe8STUART KELVIN.jpg"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\teacher\\94364aa8-09e9-4e8d-8d12-9f2148d8eedcKEVIN WILLIAMS.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\teacher\\94364aa8-09e9-4e8d-8d12-9f2148d8eedcKEVIN WILLIAMS.jpg"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\teacher\\b2ea7f94-7acf-417a-a999-a959a5a4732cEAMILY CRISTIAN.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\teacher\\b2ea7f94-7acf-417a-a999-a959a5a4732cEAMILY CRISTIAN.jpg"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\teacher\\fa24c6a7-e500-44d3-9506-91b97f7eadb5SALINA GOMAZE.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\teacher\\fa24c6a7-e500-44d3-9506-91b97f7eadb5SALINA GOMAZE.jpg"
     },
     {
       "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\teacher\\teacher-details.jpg",

@@ -22,7 +22,7 @@
                     <th> <img style="width:70px;height:70px; object-fit:cover" src="~/assets/img/course/@item.Image">  </th>
                     <th>@item.Category.Name</th>
                     <td><a asp-controller="course" asp-action="update" asp-route-id="@item.Id"><i class="fas fa-edit text text-primary"></i></a></td>
-                    <td><a onclick="if (!confirm('Are you sure to delete?')){return false;}" asp-controller="slider" asp-action="delete" asp-route-id="@item.Id" class="delete-item"><i class="fas fa-trash text text-danger"></i></a></td>
+                    <td><a onclick="if (!confirm('Are you sure to delete?')){return false;}" asp-controller="course" asp-action="delete" asp-route-id="@item.Id" class="delete-item"><i class="fas fa-trash text text-danger"></i></a></td>
                 </tr>
             }
 

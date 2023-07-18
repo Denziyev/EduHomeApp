@@ -1,14 +1,19 @@
 using EduHome.App.Context;
+using EduHome.App.ServiceRegistration;
+using EduHome.Core.Entities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<EduHomeAppDxbContext>(opt =>
-{
-    opt.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
-});
+
+
+builder.Services.AddHttpContextAccessor();
+builder.Services.Register(builder.Configuration);
+
+
 
 var app = builder.Build();
 
@@ -25,6 +30,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseEndpoints(endpoints =>

@@ -1,10 +1,11 @@
 ﻿using EduHome.Core.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection.Metadata;
 
 namespace EduHome.App.Context
 {
-    public class EduHomeAppDxbContext : DbContext
+    public class EduHomeAppDxbContext : IdentityDbContext<AppUser>
     {
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<AboutWelcome> AboutWelcomes { get; set; }
@@ -21,7 +22,8 @@ namespace EduHome.App.Context
         public DbSet<BlogTag> BlogTags { get; set; }
         public DbSet<CourseTag> CourseTags { get; set; }
         public DbSet<Feature> Features { get; set; }
-
+        public DbSet<Message> Messages { get; set; }
+        public DbSet<Subscribe> Subscribes { get; set; }
 
 
 
@@ -36,6 +38,7 @@ namespace EduHome.App.Context
                 .HasOne(a => a.Feature)
                 .WithOne(b => b.Course)
                 .HasForeignKey<Feature>(b => b.CourseId);
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

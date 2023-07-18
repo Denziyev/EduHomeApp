@@ -24,7 +24,7 @@ namespace EduHome.App.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Create()
         {
-            ViewBag.Courses = await _context.Courses.Where(x => !x.IsDeleted).ToListAsync();
+            ViewBag.Courses = await _context.Courses.Where(x => !x.IsDeleted && x.Feature == null).ToListAsync();
 
             return View();
         }
@@ -33,12 +33,13 @@ namespace EduHome.App.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Feature feature)
         {
-            ViewBag.Courses = await _context.Courses.Where(x => !x.IsDeleted).ToListAsync();
+            ViewBag.Courses = await _context.Courses.Where(x => !x.IsDeleted && x.Feature==null).ToListAsync();
 
             if (!ModelState.IsValid)
             {
                 return View();
             }
+
             feature.CreatedAt = DateTime.Now;
             await _context.Features.AddAsync(feature);
             await _context.SaveChangesAsync();
@@ -73,7 +74,7 @@ namespace EduHome.App.Areas.Admin.Controllers
             {
                 return View();
             }
-            Feature.Course = postFeature.Course;
+            Feature.CourseId = postFeature.CourseId;
             Feature.Duration = postFeature.Duration;
             Feature.ClassDuration=postFeature.ClassDuration;
             Feature.Assestments= postFeature.Assestments;

@@ -1,0 +1,32 @@
+﻿@model List<Message>
+<div class="container">
+    <table class="table table-sm">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Subject</th>
+                <th scope="col">Message</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+
+                <tr>
+                    <th scope="row">@item.Id</th>
+                    <th>@item.Name</th>
+                    <th>@item.Email</th>
+                    <th>@item.Subject</th>
+                    <th>@item.message</th>
+                    <td><a onclick="if (!confirm('Are you sure to delete?')){return false;}" asp-controller="Contact" asp-action="delete" asp-route-id="@item.Id" class="delete-item"><i class="fas fa-trash text text-danger"></i></a></td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+   
+
+</div>

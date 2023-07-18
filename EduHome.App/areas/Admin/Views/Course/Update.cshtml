@@ -17,10 +17,17 @@
 
         <div class="form-group">
             <select multiple class="form-select" asp-for="TagIds" aria-label="Disabled select example">
-                <option selected>Choose Tags</option>
+                <option >Choose Tags</option>
                 @foreach (var item in ViewBag.Tags)
                 {
-                    <option value="@item.Id">@item.Name</option>
+                    if (Model.CourseTags.Any(x => x.TagId == item.Id))
+                    {                       
+                        <option selected value="@item.Id">@item.Name</option>
+                    }
+                    else
+                    {
+                        <option value="@item.Id">@item.Name</option>
+                    }
                 }
 
             </select>
@@ -35,7 +42,7 @@
 
         <div class="form-group">
             <label asp-for="FormFile">Image</label>
-            <input  accept="image/*" type="file" class="form-control" asp-for="FormFile">
+            <input   accept="image/*" type="file" class="form-control" asp-for="FormFile">
             <span class="alert-danger" asp-validation-for="FormFile"></span>
         </div>
 

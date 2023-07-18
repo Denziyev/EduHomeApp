@@ -98,54 +98,25 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 col-sm-6 col-xs-12">
+            @foreach(var item in Model.courses.Take(3))
+            {           
+            <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="single-course">
                             <div class="course-img">
-                                <a href="course-details.html"><img src="~/assets/img/course/course1.jpg" alt="course">
+                                <a href="~/course/detail/@item.Id"><img src="~/assets/img/course/@item.Image" alt="@item.Name">
                                     <div class="course-hover">
                                         <i class="fa fa-link"></i>
                                     </div>
                                 </a>
                             </div>
                             <div class="course-content">
-                                <h3><a href="course-details.html">CSE ENGINEERING</a></h3>
-                                <p>I must explain to you how all this a mistaken idea of denouncing great explorer of the rut the is lder of human happiness</p>
-                                <a class="default-btn" href="course-details.html">read more</a>
+                            <h3><a href="~/course/detail/@item.Id">@item.Name</a></h3>
+                                <p>@item.Description</p>
+                            <a class="default-btn" href="~/course/detail/@item.Id">read more</a>
                             </div>   
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="single-course">
-                            <div class="course-img">
-                                <a href="course-details.html"><img src="~/assets/img/course/course2.jpg" alt="course">
-                                    <div class="course-hover">
-                                        <i class="fa fa-link"></i>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="course-content">
-                                <h3><a href="course-details.html">political science</a></h3>
-                                <p>I must explain to you how all this a mistaken idea of denouncing great explorer of the rut the is lder of human happiness</p>
-                                <a class="default-btn" href="course-details.html">read more</a>
-                            </div>   
-                        </div>
-                    </div>
-                    <div class="col-md-4 hidden-sm col-xs-12">
-                        <div class="single-course">
-                            <div class="course-img">
-                                <a href="course-details.html"><img src="~/assets/img/course/course3.jpg" alt="course">
-                                    <div class="course-hover">
-                                        <i class="fa fa-link"></i>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="course-content">
-                                <h3><a href="course-details.html">micro biology</a></h3>
-                                <p>I must explain to you how all this a mistaken idea of denouncing great explorer of the rut the is lder of human happiness</p>
-                                <a class="default-btn" href="course-details.html">read more</a>
-                            </div>   
-                        </div>
-                    </div>
+            }
                 </div>
             </div>
         </div>
@@ -290,11 +261,13 @@
     <div class="container">
         <div class="row">
             <div class="testimonial-owl owl-theme owl-carousel">
+                   @foreach (var item in Model.teachers)
+                            {
                 <div class="col-md-8 col-md-offset-2 col-sm-12">
+             
                     <div class="single-testimonial">
                         <div class="testimonial-info">
-                            @foreach (var item in Model.teachers)
-                            {
+                          
                                 <div class="testimonial-img">
                                     <img src="~/assets/img/teacher/@item.Image" alt="@item.FullName">
                                 </div>
@@ -303,10 +276,12 @@
                                     <h4>@item.FullName</h4>
                                     <h5>@item.Position.Name</h5>
                                 </div>
-                            }
+                            
                         </div>
                     </div>
+                    
                 </div>
+                }
             </div>
         </div>
     </div>
@@ -324,63 +299,29 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="single-blog">
-                            <div class="blog-img">
-                                <a href="blog-details.html"><img src="~/assets/img/blog/blog1.jpg" alt="blog"></a>
-                                <div class="blog-hover">
-                                    <a href="blog-details.html"><i class="fa fa-link"></i></a>
-                                </div>
+            @foreach(var item in Model.blogs.Take(3))
+            {
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="single-blog">
+                        <div class="blog-img">
+                            <a href="~/blog/detail/@item.Id"><img src="~/assets/img/blog/@item.Image" alt="blog"></a>
+                            <div class="blog-hover">
+                                <a href="~/blog/detail/@item.Id"><i class="fa fa-link"></i></a>
                             </div>
-                            <div class="blog-content">
-                                <div class="blog-top">
-                                    <p>By Alex  /  June 20, 2017  /  <i class="fa fa-comments-o"></i> 4</p>
-                                </div>
-                                <div class="blog-bottom">
-                                    <h2><a href="blog-details.html">I must explain to you how all this a mistaken idea </a></h2>
-                                    <a href="blog-details.html">read more</a>
-                                </div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-top">
+                                <p>By @item.Writer  /  @item.Time?.ToString("MMMM d, yyyy") /  <i class="fa fa-comments-o"></i> 4</p>
+                            </div>
+                            <div class="blog-bottom">
+                                <h2><a href="~/blog/detail/@item.Id">@item.Title </a></h2>
+                                <a href="~/blog/detail/@item.Id">read more</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="single-blog">
-                            <div class="blog-img">
-                                <a href="blog-details.html"><img src="~/assets/img/blog/blog2.jpg" alt="blog"></a>
-                                <div class="blog-hover">
-                                    <a href="blog-details.html"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="blog-content">
-                                <div class="blog-top">
-                                    <p>By Alex  /  June 20, 2017  /  <i class="fa fa-comments-o"></i> 4</p>
-                                </div>
-                                <div class="blog-bottom">
-                                    <h2><a href="blog-details.html">I must explain to you how all this a mistaken idea </a></h2>
-                                    <a href="blog-details.html">read more</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 hidden-sm col-xs-12">
-                        <div class="single-blog">
-                            <div class="blog-img">
-                                <a href="blog-details.html"><img src="~/assets/img/blog/blog3.jpg" alt="blog"></a>
-                                <div class="blog-hover">
-                                    <a href="blog-details.html"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                            <div class="blog-content">
-                                <div class="blog-top">
-                                    <p>By Alex  /  June 20, 2017  /  <i class="fa fa-comments-o"></i> 4</p>
-                                </div>
-                                <div class="blog-bottom">
-                                    <h2><a href="blog-details.html">I must explain to you how all this a mistaken idea </a></h2>
-                                    <a href="blog-details.html">read more</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+            }
+
                 </div>
             </div>
         </div>

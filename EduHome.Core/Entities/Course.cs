@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,8 @@ namespace EduHome.Core.Entities
 {
     public class Course:BaseModel
     {
+        [Required]
+        public string Name { get; set; }
         public Category? Category { get; set; }
         public int CategoryId { get; set; }
         public string? Image { get; set; }
@@ -20,7 +23,6 @@ namespace EduHome.Core.Entities
         public string Certification { get; set; }
 
         public Feature? Feature { get; set; }
-        public int FeatureId { get; set; }
 
         public List<CourseTag>? CourseTags { get; set; }
 

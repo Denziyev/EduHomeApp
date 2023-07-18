@@ -9,6 +9,9 @@ namespace EduHome.App.ViewModels
 
         public List<Teacher> teachers { get; set; }
 
- 
+      public List<Course> courses { get; set; }
+        public List<Blog> blogs { get; set; }
+
+        public List<Subscribe> subscribes { get; set; }
     }
 }

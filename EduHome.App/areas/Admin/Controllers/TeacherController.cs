@@ -23,6 +23,7 @@ namespace Arsha.App.Areas.Admin.Controllers
         public async Task<IActionResult> Index()
         {
             IEnumerable<Teacher> Teachers = await _context.Teachers.Include(x => x.Position).
+                Where(c => !c.IsDeleted).Include(x => x.Position).
                 Where(c => !c.IsDeleted).Include(x => x.Faculty).
 				Where(c => !c.IsDeleted).ToListAsync();
             return View(Teachers);

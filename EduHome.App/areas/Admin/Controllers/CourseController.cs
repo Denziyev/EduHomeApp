@@ -21,7 +21,7 @@ namespace EduHome.App.Areas.Admin.Controllers
 
         public async Task<IActionResult> Index()
         {
-            IEnumerable<Course> Courses = await _context.Courses.Where(x => !x.IsDeleted).Include(x => x.Feature).ToListAsync();
+            IEnumerable<Course> Courses = await _context.Courses.Where(x => !x.IsDeleted).Include(x=>x.Category).ToListAsync();
             return View(Courses);
         }
 
@@ -49,7 +49,7 @@ namespace EduHome.App.Areas.Admin.Controllers
                 return View();
             }
 
-            Course.Image = Course.FormFile.createimage(_env.WebRootPath, "assets/img/course");
+            Course.Image = Course.FormFile.createimage(_env.WebRootPath, "assets/img/course/");
             Course.CreatedAt = DateTime.Now;
 
             foreach (var item in Course.TagIds)
@@ -143,7 +143,7 @@ namespace EduHome.App.Areas.Admin.Controllers
             }
 
 
-
+            Helper.removeimage(_env.WebRootPath, "assets/img/course", updatecourse.Image);
             Course.Image = updatecourse.FormFile?.createimage(_env.WebRootPath, "assets/img/course");
 
             _context.Courses.Update(Course);
