@@ -79,11 +79,11 @@ namespace EduHome.App.Areas.Admin.Controllers
 
             foreach(var item in subscribers)
             {
-                //string token = await _userManager.GeneratePasswordResetTokenAsync(item);
+
 
                 UriBuilder uriBuilder = new UriBuilder();
 
-                var link = Url.Action(action: "index", controller: "~/Home/",
+                var link = Url.Action(action: "index", controller: "Home",
                     values: new { email = item.Email },
                     protocol: Request.Scheme);
 

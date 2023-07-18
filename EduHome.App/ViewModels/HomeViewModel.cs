@@ -5,7 +5,7 @@ namespace EduHome.App.ViewModels
     public class HomeViewModel
     {
         public List<Slider> sliders { get; set; }
-        public List<AboutWelcome> aboutWelcomes { get; set;}
+ 
 
         public List<Teacher> teachers { get; set; }
 

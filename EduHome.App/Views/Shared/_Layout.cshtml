@@ -1,4 +1,9 @@
-﻿
+﻿@using EduHome.App.Services.Implementations;
+@inject EduHome.App.Services.Interfaces.ISettingService settingService
+
+@{
+    Setting? setting = await settingService.Get();
+}
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -81,48 +86,48 @@
                                         <li>
                                             <a href="/">Home</a>
                                             <ul>
-                                                <li><a href="~/assets/index.html">Home One</a></li>
-                                                <li><a href="~/assets/index-2.html">Home Two</a></li>
-                                                <li><a href="~/assets/index-3.html">Home Three</a></li>
-                                                <li><a href="~/assets/index-4.html">Home Four</a></li>
-                                                <li><a href="~/assets/index-5.html">Home Five</a></li>
+                                                <li><a href="/">Home One</a></li>
+                                                <li><a href="/">Home Two</a></li>
+                                                <li><a href="/">Home Three</a></li>
+                                                <li><a href="/">Home Four</a></li>
+                                                <li><a href="/">Home Five</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="/about">About</a></li>
                                         <li>
-                                            <a href="~/assets/course.html">courses</a>
+                                            <a href="/course">courses</a>
                                             <ul>
-                                                <li><a href="~/assets/course.html">courses</a></li>
-                                                <li><a href="~/assets/course-details.html">courses details</a></li>
+                                                <li><a href="/course">courses</a></li>
+                                                <li><a href="/course">courses details</a></li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="~/assets/event.html">event</a>
+                                            <a href="#">event</a>
                                             <ul>
-                                                <li><a href="~/assets/event.html">event</a></li>
-                                                <li><a href="~/assets/event-left-side-bar.html">event left sidebar</a></li>
-                                                <li><a href="~/assets/event-right-side-bar.html">event right sidebar</a></li>
-                                                <li><a href="~/assets/event-details.html">event details</a></li>
+                                                <li><a href="#">event</a></li>
+                                                <li><a href="#">event left sidebar</a></li>
+                                                <li><a href="#">event right sidebar</a></li>
+                                                <li><a href="#">event details</a></li>
                                             </ul>
                                         </li>
                                         <li class="hidden-sm">
                                             <a href="~/teacher/">teacher</a>
                                             <ul>
                                                 <li><a href="~/teacher/">teacher</a></li>
-                                                <li><a href="~/teacher/detail/">teacher details</a></li>
+                                                <li><a href="~/teacher/">teacher details</a></li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="~/assets/blog.html">blog</a>
+                                            <a href="/blog">blog</a>
                                             <ul>
-                                                <li><a href="~/assets/blog.html">blog</a></li>
-                                                <li><a href="~/assets/blog-left-side-bar.html">blog left sidebar</a></li>
-                                                <li><a href="~/assets/blog-right-side-bar.html">blog righ sidebar</a></li>
-                                                <li><a href="~/assets/blog-details.html">blog details</a></li>
+                                                <li><a href="/blog">blog</a></li>
+                                                <li><a href="/blog">blog left sidebar</a></li>
+                                                <li><a href="/blog">blog righ sidebar</a></li>
+                                                <li><a href="/blog">blog details</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="~/assets/contact.html">Contact</a></li>
-                                        <li><a href="~/assets/#">Buy Now</a>
+                                        <li><a href="/contact">Contact</a></li>
+                                        <li><a href="#">Buy Now</a>
                                     </ul>
                                 </nav>
                             </div>

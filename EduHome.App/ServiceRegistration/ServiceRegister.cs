@@ -1,5 +1,5 @@
 ﻿using EduHome.App.Context;
-
+using EduHome.App.Services.Implementations;
 using EduHome.App.Services.Interfaces;
 using EduHome.Core.Entities;
 using Fir.App.Services.Implementations;
@@ -13,6 +13,8 @@ namespace EduHome.App.ServiceRegistration
         public static void Register(this IServiceCollection service, IConfiguration configuration)
         {
             service.AddScoped<IMailService, MailService>();
+
+            service.AddScoped<ISettingService, SettingService>();
 
             service.AddIdentity<AppUser, IdentityRole>()
                    .AddDefaultTokenProviders()

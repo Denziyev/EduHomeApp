@@ -1,0 +1,115 @@
+﻿@model Setting
+<div class="container">
+    <form asp-action="create" method="post" enctype="multipart/form-data">
+        <div class="alert alert-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group">
+            <label asp-for="LogoFormFile">Logo:</label>
+            <input accept="image/*" type="file" class="form-control" asp-for="LogoFormFile">
+            <span class="alert-danger" asp-validation-for="LogoFormFile"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="NavbarTitle">NavbarTitle</label>
+            <input type="text" class="form-control" asp-for="NavbarTitle">
+            <span class="alert-danger" asp-validation-for="NavbarTitle"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="MainPhone">MainPhone</label>
+            <input type="text" class="form-control" asp-for="MainPhone">
+            <span class="alert-danger" asp-validation-for="MainPhone"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="DescriptionFooter">DescriptionFooter</label>
+            <input type="text" class="form-control" asp-for="DescriptionFooter">
+            <span class="alert-danger" asp-validation-for="DescriptionFooter"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="CityAdress">CityAdress</label>
+            <input type="text" class="form-control" asp-for="CityAdress">
+            <span class="alert-danger" asp-validation-for="CityAdress"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="StreetAdress">StreetAdress</label>
+            <input type="text" class="form-control" asp-for="StreetAdress">
+            <span class="alert-danger" asp-validation-for="StreetAdress"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Phone1">Phone1</label>
+            <input type="text" class="form-control" asp-for="Phone1">
+            <span class="alert-danger" asp-validation-for="Phone1"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Phone2">Phone2</label>
+            <input type="text" class="form-control" asp-for="Phone2">
+            <span class="alert-danger" asp-validation-for="Phone2"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="WelcomeTittle">WelcomeTittle</label>
+            <input type="text" class="form-control" asp-for="WelcomeTittle">
+            <span class="alert-danger" asp-validation-for="WelcomeTittle"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="WelcomeDesc1">WelcomeDesc1</label>
+            <input type="text" class="form-control" asp-for="WelcomeDesc1">
+            <span class="alert-danger" asp-validation-for="WelcomeDesc1"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="WelcomeDesc2">WelcomeDesc2</label>
+            <input type="text" class="form-control" asp-for="WelcomeDesc2">
+            <span class="alert-danger" asp-validation-for="WelcomeDesc2"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="welcomeImageFormFile"> Welcome Image</label>
+            <input accept="image/*" type="file" class="form-control" asp-for="welcomeImageFormFile">
+            <span class="alert-danger" asp-validation-for="welcomeImageFormFile"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="WelcomeButtonContent">WelcomeButtonContent</label>
+            <input type="text" class="form-control" asp-for="WelcomeButtonContent">
+            <span class="alert-danger" asp-validation-for="WelcomeButtonContent"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="WelcomeButtonLink">WelcomeButtonLink</label>
+            <input type="text" class="form-control" asp-for="WelcomeButtonLink">
+            <span class="alert-danger" asp-validation-for="WelcomeButtonLink"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="NoticeVideoLink">NoticeVideoLink</label>
+            <input type="text" class="form-control" asp-for="NoticeVideoLink">
+            <span class="alert-danger" asp-validation-for="NoticeVideoLink"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="NoticeText">NoticeText</label>
+            <input type="text" class="form-control" asp-for="NoticeText">
+            <span class="alert-danger" asp-validation-for="NoticeText"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="MailFooter">MailFooter</label>
+            <input type="email" class="form-control" asp-for="MailFooter">
+            <span class="alert-danger" asp-validation-for="MailFooter"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="SiteFooter">SiteFooter</label>
+            <input type="text" class="form-control" asp-for="SiteFooter">
+            <span class="alert-danger" asp-validation-for="SiteFooter"></span>
+        </div>
+        
+        <div class="form-group">
+            <label asp-for="AdressIconFormFile">Adress Icon</label>
+            <input accept="image/*" type="file" class="form-control" asp-for="AdressIconFormFile">
+            <span class="alert-danger" asp-validation-for="AdressIconFormFile"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="PhoneIconFormFile">Phone Icon</label>
+            <input accept="image/*" type="file" class="form-control" asp-for="PhoneIconFormFile">
+            <span class="alert-danger" asp-validation-for="PhoneIconFormFile"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="MailIconFormFile">Mail Icon:</label>
+            <input accept="image/*" type="file" class="form-control" asp-for="MailIconFormFile">
+            <span class="alert-danger" asp-validation-for="MailIconFormFile"></span>
+        </div>
+        @Html.AntiForgeryToken()
+        <button type="submit">Create</button>
+    </form>
+</div>

@@ -1,7 +1,23 @@
 ﻿@using EduHome.App.ViewModels;
-@{
-    ViewData["Title"] = "Home Page";
+﻿
+@if (!string.IsNullOrWhiteSpace((string)TempData["register"]))
+{
+    <div style="display:none" id="message">@TempData["register"]</div>
 }
+
+@if (!string.IsNullOrWhiteSpace((string)TempData["Forget"]))
+{
+    <div style="display:none" id="message">@TempData["Forget"]</div>
+}
+@if (!string.IsNullOrWhiteSpace((string)TempData["Login"]))
+{
+    <div style="display:none" id="message">@TempData["Login"]</div>
+}
+@if (!string.IsNullOrWhiteSpace((string)TempData["Logout"]))
+{
+    <div style="display:none" id="message">@TempData["Logout"]</div>
+}
+
 @model HomeViewModel 
 
 
@@ -66,22 +82,18 @@
 <div class="about-area pb-155">
     <div class="container">
             <div class="row">
-            @foreach (var item in Model.aboutWelcomes)
-            {
-                <div class="col-md-6 col-sm-6">
-                    <div class="about-content">
-                        <h2>@item.Title</h2>
-                        <p>@item.Description1</p>
-                        <p class="hidden-sm">@item.Description2</p>
-                        <a class="default-btn" href="@item.Link">view courses</a>
-                    </div>
+            <div class="col-md-6 col-sm-6">
+                <div class="about-content">
+                    <h2>item.Title</h2>
+                    <p>item.Description1</p>
+                    <p class="hidden-sm">item.Description2</p>
+                    <a class="default-btn" href="item.Link">view courses</a>
                 </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="about-img">
-                        <img src="~/assets/img/about/@item.Image" alt="about">
-                    </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <div class="about-img">
+                    <img src="~/assets/img/about/item.Image" alt="about">
                 </div>
-            }
             </div>
     </div>
 </div>
@@ -97,27 +109,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-            @foreach(var item in Model.courses.Take(3))
-            {           
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="single-course">
-                            <div class="course-img">
-                                <a href="~/course/detail/@item.Id"><img src="~/assets/img/course/@item.Image" alt="@item.Name">
-                                    <div class="course-hover">
-                                        <i class="fa fa-link"></i>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="course-content">
-                            <h3><a href="~/course/detail/@item.Id">@item.Name</a></h3>
-                                <p>@item.Description</p>
-                            <a class="default-btn" href="~/course/detail/@item.Id">read more</a>
-                            </div>   
-                        </div>
-                    </div>
-            }
-                </div>
+        @await Html.PartialAsync("_CoursePartialView",Model.courses.Take(3).ToList())
             </div>
         </div>
         <!-- Courses Area End -->
@@ -259,31 +251,7 @@
         <!-- Testimonial Area Start -->
 <div class="testimonial-area pt-110 pb-105 text-center">
     <div class="container">
-        <div class="row">
-            <div class="testimonial-owl owl-theme owl-carousel">
-                   @foreach (var item in Model.teachers)
-                            {
-                <div class="col-md-8 col-md-offset-2 col-sm-12">
-             
-                    <div class="single-testimonial">
-                        <div class="testimonial-info">
-                          
-                                <div class="testimonial-img">
-                                    <img src="~/assets/img/teacher/@item.Image" alt="@item.FullName">
-                                </div>
-                                <div class="testimonial-content">
-                                    <p>@item.Description</p>
-                                    <h4>@item.FullName</h4>
-                                    <h5>@item.Position.Name</h5>
-                                </div>
-                            
-                        </div>
-                    </div>
-                    
-                </div>
-                }
-            </div>
-        </div>
+        @await Html.PartialAsync("_SliderTeacherPartialView",Model.teachers)
     </div>
 </div>
         <!-- Testimonial Area End -->
@@ -298,31 +266,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-            @foreach(var item in Model.blogs.Take(3))
-            {
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="single-blog">
-                        <div class="blog-img">
-                            <a href="~/blog/detail/@item.Id"><img src="~/assets/img/blog/@item.Image" alt="blog"></a>
-                            <div class="blog-hover">
-                                <a href="~/blog/detail/@item.Id"><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-top">
-                                <p>By @item.Writer  /  @item.Time?.ToString("MMMM d, yyyy") /  <i class="fa fa-comments-o"></i> 4</p>
-                            </div>
-                            <div class="blog-bottom">
-                                <h2><a href="~/blog/detail/@item.Id">@item.Title </a></h2>
-                                <a href="~/blog/detail/@item.Id">read more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            }
-
-                </div>
+        @await Html.PartialAsync("_BlogPartialView",Model.blogs.Take(3).ToList())
             </div>
         </div>
         <!-- Blog Area End -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        const Message = document.getElementById("message");
+        if (Message != undefined) {
+            const message = Message.innerHTML;
+            if (message != "") {
+                Swal.fire(`${message}`)
+            }
+
+        }</script>

@@ -16,15 +16,17 @@ namespace EduHome.App.Controllers
 
         public async Task<IActionResult> Index()
         {
-            HomeViewModel homeViewModel = new HomeViewModel()
+            AboutViewModel aboutViewModel = new AboutViewModel()
             {
-                aboutWelcomes = await _context.AboutWelcomes.Where(x => !x.IsDeleted).ToListAsync(),
-                teachers = await _context.Teachers.Where(x => !x.IsDeleted).Include(x=>x.Position).Where(x=>!x.IsDeleted).
-                Include(x => x.SocialNetworks).Where(x => !x.IsDeleted).
-                Include(x => x.Faculty).Where(x => !x.IsDeleted).
-                Include(x => x.Skills).Where(x => !x.IsDeleted).ToListAsync()
+      
+                teachers = await _context.Teachers.Where(x => !x.IsDeleted)
+                      .Include(x => x.Faculty).Where(x => !x.IsDeleted)
+                       .Include(x => x.Position).Where(x => !x.IsDeleted)
+                        .Include(x => x.Skills.Where(x => !x.IsDeleted))
+                        .Include(x => x.SocialNetworks.Where(x => !x.IsDeleted))
+                       .ToListAsync()
             };
-            return View(homeViewModel);
+            return View(aboutViewModel);
         }
     }
 }

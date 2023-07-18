@@ -1,6 +1,7 @@
 ﻿using EduHome.App.Context;
 using EduHome.App.Extentions;
 using EduHome.App.Helpers;
+using EduHome.App.Services.Interfaces;
 using EduHome.Core.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -12,11 +13,13 @@ namespace EduHome.App.Areas.Admin.Controllers
     {
         private readonly EduHomeAppDxbContext _context;
         private readonly IWebHostEnvironment _env;
+        private readonly IMailService _mailService;
 
-        public CourseController(EduHomeAppDxbContext context, IWebHostEnvironment env)
+        public CourseController(EduHomeAppDxbContext context, IWebHostEnvironment env, IMailService mailService)
         {
             _context = context;
             _env = env;
+            _mailService = mailService;
         }
 
         public async Task<IActionResult> Index()
@@ -67,6 +70,24 @@ namespace EduHome.App.Areas.Admin.Controllers
                 };
                 await _context.CourseTags.AddAsync(CourseTag);
             }
+
+
+            //email gondermek yenilik haqqinda
+            List<Subscribe> subscribers = await _context.Subscribes.Where(x => !x.IsDeleted).ToListAsync();
+
+            foreach (var item in subscribers)
+            {
+                //string token = await _userManager.GeneratePasswordResetTokenAsync(item);
+
+                UriBuilder uriBuilder = new UriBuilder();
+
+                var link = Url.Action(action: "index", controller: "Home",
+                    values: new { email = item.Email },
+                    protocol: Request.Scheme);
+
+                await _mailService.Send("ilkinhd@code.edu.az", item.Email, link, "New Course", "Click me for New Course");
+            }
+
             await _context.Courses.AddAsync(Course);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));

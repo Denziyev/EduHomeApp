@@ -8,7 +8,7 @@ namespace EduHome.App.Context
     public class EduHomeAppDxbContext : IdentityDbContext<AppUser>
     {
         public DbSet<Slider> Sliders { get; set; }
-        public DbSet<AboutWelcome> AboutWelcomes { get; set; }
+
         public DbSet<Teacher> Teachers { get; set; }
         public DbSet<SocialNetwork> SocialNetworks { get; set; }
         public DbSet<Skills> Skills { get; set; }
@@ -24,7 +24,7 @@ namespace EduHome.App.Context
         public DbSet<Feature> Features { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<Subscribe> Subscribes { get; set; }
-
+        public DbSet<Setting> Settings { get; set; }
 
 
         public EduHomeAppDxbContext(DbContextOptions<EduHomeAppDxbContext> options) : base(options)
@@ -38,6 +38,12 @@ namespace EduHome.App.Context
                 .HasOne(a => a.Feature)
                 .WithOne(b => b.Course)
                 .HasForeignKey<Feature>(b => b.CourseId);
+
+            modelBuilder.Entity<Setting>()
+        .HasMany(e => e.SocialNetworks)
+        .WithOne(e => e.Setting)
+        .HasForeignKey(e => e.SettingId)
+        .IsRequired();
             base.OnModelCreating(modelBuilder);
         }
     }
