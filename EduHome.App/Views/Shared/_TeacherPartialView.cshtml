@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Teacher>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-3 col-sm-4 col-xs-12">
+            <div class="single-teacher mb-45">
+                <div class="single-teacher-img">
+                    <a href="~/teacher/detail/@item.Id"><img src="~/assets/img/teacher/@item.Image" alt="@item.FullName"></a>
+                </div>
+                <div class="single-teacher-content text-center">
+                    <h2><a href="/teacher/detail/@item.Id">@item.FullName</a></h2>
+                    <h4>@item.Position.Name</h4>
+                    <ul>
+                        @foreach (var social in item.SocialNetworks)
+                        {
+                            <li> <a href="@social.Link"><i class="zmdi @social.Icon"></i></a></li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
