@@ -1,0 +1,8 @@
+﻿@model List<NoticeBoard>
+@foreach (var item in Model)
+{
+    <div class="single-notice-left mb-23 pb-20">
+        <h4>@item.DateTime?.ToString("MMMM d, yyyy")</h4>
+        <p> @item.Content</p>
+    </div>
+}

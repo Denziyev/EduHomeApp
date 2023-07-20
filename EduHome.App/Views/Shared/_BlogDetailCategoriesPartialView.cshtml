@@ -1,0 +1,5 @@
+﻿@model BlogViewModel
+@foreach (var item in Model.Categories)
+{
+    <li><a href="#">@item.Name (@Model.Blogs.Where(x=>!x.IsDeleted && x.Category==item).Count())</a></li>
+}

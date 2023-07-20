@@ -1,0 +1,7 @@
+﻿@model BlogViewModel
+
+@foreach (var item in Model.Tags)
+{
+
+    <a href="/blog" class="mr-10 mb-10">@item.Name</a>
+}

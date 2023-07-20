@@ -1,0 +1,30 @@
+﻿@model Message
+
+<form asp-action="sendmessage" asp-controller="contact" method="post" enctype="multipart/form-data">
+    <div class="alert alert-danger" asp-validation-summary="ModelOnly"></div>
+    <div class="row">
+        <div class="form-group">
+            <label asp-for="@Model.Name">Name</label>
+            <input asp-for="@Model.Name" name="name" type="text" class="form-control">
+            <span class="text text-danger" asp-validation-for="@Model.Name"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Email">Email</label>
+            <input asp-for="@Model.Email" name="email" type="email" class="form-control">
+            <span class="text text-danger" asp-validation-for="@Model.Email"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Subject">Subject</label>
+            <input asp-for="@Model.Name" name="subject" class="form-control">
+            <span class="text text-danger" asp-validation-for="@Model.Subject"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.message">Message</label>
+            <textarea asp-for="@Model.Name" name="message" id="message" cols="15" rows="10" class="form-control"></textarea>
+            <span class="text text-danger" asp-validation-for="@Model.message"></span>
+
+        </div>
+    </div>
+    <button class="btn btn-danger" type="submit"><span>send message</span></button>
+    <p class="form-messege"></p>
+</form>
