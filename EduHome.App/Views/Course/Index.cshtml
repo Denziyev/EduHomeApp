@@ -1,0 +1,93 @@
+﻿  @model CourseViewModel
+<!-- Banner Area Start -->
+<div class="banner-area-wrapper">
+    <div class="banner-area text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="banner-content-wrapper">
+                        <div class="banner-content">
+                            <h2>Course</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Banner Area End -->
+<!-- Course Start -->
+<div class="course-area pt-150 pb-150">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="course-title">
+                    <h3>search courses</h3>
+                </div>
+                <div class="course-form">
+
+                    <form id="search">
+                        <input name="search" placeholder="Search..." type="search" class="searchInput" style="height:50px">
+                        <button type="submit" class="SearchButton">search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        @await Html.PartialAsync("_CoursePartialView",Model.Courses)
+
+       @* <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                @for (int i = 1; i <= ViewBag.TotalPage; i++)
+                {
+                    @if (i == ViewBag.CurrentPage)
+                    {
+                        <li class="page-item disabled"><a class=" page-link" asp-controller="course" asp-action="index" asp-route-page="@i">@i</a></li>
+                    }
+                    else
+                    {
+                        <li class="page-item"><a class=" page-link" asp-controller="course" asp-action="index" asp-route-page="@i">@i</a></li>
+                    }
+                }
+            </ul>
+        </nav>*@
+    </div>
+</div>
+<!-- Course End -->
+
+<script>
+    const submit = document.querySelector(".SearchButton");
+    const searchInput = document.querySelector(".searchInput")
+    const container = document.querySelector(".course_container")
+    searchInput.addEventListener("input", (e) => {
+        e.preventDefault();
+
+        let href = `/course/search?search=${searchInput.value}`;
+        fetch(href)
+            .then(x => x.json())
+            .then(x => {
+                container.innerHTML = ""
+                x.forEach(item => {
+                    console.log(x)
+                    let view = `
+                 <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="single-course">
+                                <div class="course-img">
+                                    <a asp-action="detail" asp-controller="course" asp-route-id="${item.id}"><img src="/assets/img/course/${item.image}" alt="course">
+                                        <div class="course-hover">
+                                            <i class="fa fa-link"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="course-content">
+                                    <h3><a href="course-details.html">${item.name}</a></h3>
+                                    <p>${item.description}</p>
+                                    <a class="default-btn" href="">read more</a>
+                                </div>
+                            </div>
+                        </div>
+            `;
+                    container.innerHTML += view;
+                })
+            })
+    })
+</script>
