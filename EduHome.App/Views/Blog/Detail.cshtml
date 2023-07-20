@@ -1,0 +1,81 @@
+﻿ 
+   @model BlogViewModel
+<!-- Banner Area Start -->
+<div class="banner-area-wrapper">
+    <div class="banner-area text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="banner-content-wrapper">
+                        <div class="banner-content">
+                            <h2>blog details</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Banner Area End -->
+<!-- Blog Start -->
+<div class="blog-details-area pt-150 pb-140">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="blog-details">
+                    <div class="blog-details-img">
+                        <img src"~/assets/img/blog/ @Model.Blog.Image" alt="blog-details">
+                    </div>
+                    <div class="blog-details-content">
+                        <h2>@Model.Blog.Title</h2>
+                        <h6>By @Model.Blog.Writer  /  @Model.Blog.Time?.ToString("MMMM d, yyyy")  /  <i class="fa fa-comments-o"></i> 4</h6>
+                        <p>@Model.Blog.Content</p>
+                    </div>
+                    <div class="reply-area">
+                        <h3>LEAVE A REPLY</h3>
+                        <p>I must explain to you how all this a mistaken idea of ncing great explorer of the rut<br> the is lder of human happinescias unde omnis iste natus error sit volptatem </p>
+                        @await Html.PartialAsync("_SendMessagePartialView",Model.Message)
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="blog-sidebar right">
+                    <div class="single-blog-widget mb-47">
+                        <h3>search</h3>
+                        <div class="blog-search">
+                            <form id="search" action="#">
+                                <input type="search" placeholder="Search..." name="search" />
+                                <button type="submit">
+                                    <span><i class="fa fa-search"></i></span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="single-blog-widget mb-47">
+                        <h3>categories</h3>
+                        <ul>
+                            @await Html.PartialAsync("_BlogDetailCategoriesPartialView",Model)
+                        </ul>
+                    </div>
+                    <div class="single-blog-widget mb-47">
+                        <div class="single-blog-banner">
+                            <a href="blog-details.html" id="blog"><img src"~/assets/img/blog/blog-img.jpg" alt="blog"></a>
+                            <h2>best<br> eductaion<br> theme</h2>
+                        </div>
+                    </div>
+                    <div class="single-blog-widget mb-47">
+                        <h3>latest post</h3>
+                        @await Html.PartialAsync("_DetailBlogsPartialView",Model.Blogs.Take(3).ToList())
+                    </div>
+                    <div class="single-blog-widget">
+                        <h3>tags</h3>
+                        <div class="single-tag">
+                            @await Html.PartialAsync("_BlogDetailTagsPartialView",Model)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Blog End -->

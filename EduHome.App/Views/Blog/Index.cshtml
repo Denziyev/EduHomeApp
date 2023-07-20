@@ -1,0 +1,85 @@
+﻿ @model BlogViewModel
+<!-- Banner Area Start -->
+<div class="banner-area-wrapper">
+    <div class="banner-area text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="banner-content-wrapper">
+                        <div class="banner-content">
+                            <h2>blog / right side bar</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Banner Area End -->
+  <!-- Blog Start -->
+<div class="blog-area pt-150 pb-150">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                @await Html.PartialAsync("_BlogPartialView",Model.Blogs)
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        @for (int i = 1; i <= ViewBag.TotalPage; i++)
+                        {
+                            @if (i == ViewBag.CurrentPage)
+                            {
+                                <li class="page-item disabled"><a class=" page-link" asp-controller="Blog" asp-action="index" asp-route-page="@i">@i</a></li>
+                            }
+                            else
+                            {
+                                <li class="page-item"><a class=" page-link" asp-controller="blog" asp-action="index" asp-route-page="@i">@i</a></li>
+                            }
+                        }
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-4">
+                <div class="blog-sidebar right">
+                    <div class="single-blog-widget mb-50">
+                        <h3>search</h3>
+                        <div class="blog-search">
+                            <form id="search" action="#">
+                                <input type="search" placeholder="Search..." name="search" />
+                                <button type="submit">
+                                    <span><i class="fa fa-search"></i></span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="single-blog-widget mb-50">
+                        <h3>categories</h3>
+                        <ul>
+                            @await Html.PartialAsync("_BlogDetailCategoriesPartialView",Model)
+                        </ul>
+                    </div>
+                    <div class="single-blog-widget mb-50">
+                        <div class="single-blog-banner">
+                            <a href="blog-details.html" id="blog"><img src="~/assets/img/blog/blog-img.jpg" alt="blog"></a>
+                            <h2>best<br> eductaion<br> theme</h2>
+                        </div>
+                    </div>
+                    <div class="single-blog-widget mb-50">
+                        <h3>latest post</h3>
+                        @await Html.PartialAsync("_DetailBlogsPartialView",Model.Blogs.Take(3).ToList())
+
+
+                    </div>
+                    <div class="single-blog-widget">
+                        <h3>tags</h3>
+                        <div class="single-tag">
+                      
+                            @await Html.PartialAsync("_BlogDetailTagsPartialView",Model)
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Blog End -->
