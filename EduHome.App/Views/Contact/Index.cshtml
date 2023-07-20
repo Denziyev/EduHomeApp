@@ -1,4 +1,8 @@
-﻿    @model Message
+﻿@if (!string.IsNullOrWhiteSpace((string)TempData["SendMessage"]))
+{
+    <div style="display:none" id="message">@TempData["SendMessage"]</div>
+}
+@model ContactViewModel
     <!-- Banner Area Start -->
 <div class="banner-area-wrapper">
     <div class="banner-area text-center">
@@ -33,32 +37,32 @@
                 <div class="contact-contents text-center">
                     <div class="single-contact mb-65">
                         <div class="contact-icon">
-                            <img src="img/contact/contact1.png" alt="contact">
+                            <img src="~/assets/img/footer/@Model.Settings.IconAdress" alt="contact">
                         </div>
                         <div class="contact-add">
-                            <h3>address</h3>
-                            <p>135, First Lane, City Street</p>
-                            <p>New Yourk City, USA</p>
+                            <h3>Address</h3>
+                            <p>@Model.Settings.CityAdress</p>
+                            <p>@Model.Settings.StreetAdress</p>
                         </div>
                     </div>
                     <div class="single-contact mb-65">
                         <div class="contact-icon">
-                            <img src="img/contact/contact2.png" alt="contact">
+                            <img src="~/assets/img/footer/@Model.Settings.IconPhone" alt="contact">
                         </div>
                         <div class="contact-add">
-                            <h3>address</h3>
-                            <p>135, First Lane, City Street</p>
-                            <p>New Yourk City, USA</p>
+                            <h3>Contact</h3>
+                            <p>@Model.Settings.Phone1</p>
+                            <p>@Model.Settings.Phone2</p>
                         </div>
                     </div>
                     <div class="single-contact">
                         <div class="contact-icon">
-                            <img src="img/contact/contact3.png" alt="contact">
+                            <img src="~/assets/img/footer/@Model.Settings.IconMail" alt="contact">
                         </div>
                         <div class="contact-add">
-                            <h3>address</h3>
-                            <p>135, First Lane, City Street</p>
-                            <p>New Yourk City, USA</p>
+                            <h3>Electron Adress</h3>
+                            <p>@Model.Settings.MailFooter</p>
+                            <p>@Model.Settings.SiteFooter</p>
                         </div>
                     </div>
                 </div>
@@ -67,34 +71,8 @@
                 <div class="reply-area">
                     <h3>LEAVE A message</h3>
                     <p>I must explain to you how all this a mistaken idea of ncing great explorer of the rut the is lder of human happinescias unde omnis iste natus error sit volptatem </p>
-                    <div class="alert alert-danger" asp-validation-summary="ModelOnly"></div>
-                    <form asp-action="sendmessage" asp-controller="contact" method="post" enctype="multipart/form-data">
-                        <div class="row">
-                            <div class="form-group">
-                                <label asp-for="Name">Name</label>
-                                <input asp-for="Name" name="name" type="text" class="form-control" >
-                                <span class="text text-danger" asp-validation-for="Name"></span>
-                            </div>
-                            <div class="form-group">
-                                <label asp-for="Email">Email</label>
-                                <input asp-for="Email"  name="email" type="email" class="form-control">
-                                <span class="text text-danger" asp-validation-for="Email"></span>
-                            </div>
-                            <div class="form-group">
-                                <label asp-for="Subject">Subject</label>
-                                <input asp-for="Name" name="subject" class="form-control">
-                                <span class="text text-danger" asp-validation-for="Subject"></span>
-                            </div>
-                            <div class="form-group">
-                                <label asp-for="message">Message</label>
-                                <textarea asp-for="Name" name="message" id="message" cols="15" rows="10" class="form-control"></textarea>
-                                <span class="text text-danger" asp-validation-for="message"></span>   
-                            
-                            </div>
-                        </div>
-                        <button class="btn btn-danger" type="submit" ><span>send message</span></button>
-                        <p class="form-messege"></p>
-                    </form>
+                    @await Html.PartialAsync("_SendMessagePartialView",Model.Message)
+
                 </div>
             </div>
         </div>

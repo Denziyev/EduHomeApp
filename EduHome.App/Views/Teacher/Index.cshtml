@@ -21,6 +21,21 @@
 <div class="teacher-area pt-150 pb-105">
     <div class="container">
         @await Html.PartialAsync("_TeacherPartialView",Model.Teachers)
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                @for (int i = 1; i <= ViewBag.TotalPage; i++)
+                {
+                    @if (i == ViewBag.CurrentPage)
+                    {
+                        <li class="page-item disabled"><a class=" page-link" asp-controller="Teacher" asp-action="index" asp-route-page="@i">@i</a></li>
+                    }
+                    else
+                    {
+                        <li class="page-item"><a class=" page-link" asp-controller="teacher" asp-action="index" asp-route-page="@i">@i</a></li>
+                    }
+                }
+            </ul>
+        </nav>
     </div>
 </div>
 <!-- Teacher End -->

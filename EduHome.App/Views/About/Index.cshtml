@@ -22,20 +22,8 @@
 <div class="about-area pb-155">
     <div class="container">
         <div class="row">
-         
-                <div class="col-md-6 col-sm-6">
-                    <div class="about-content">
-                        <h2>item.Title</h2>
-                        <p>item.Description1</p>
-                        <p class="hidden-sm">item.Description2</p>
-                        <a class="default-btn" href="item.Link">view courses</a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="about-img">
-                        <img src="~/assets/img/about/item.Image" alt="about">
-                    </div>
-                </div>
+
+            @await Html.PartialAsync("_WelcomeAboutPartialView",Model.settings)
      
         </div>
     </div>
@@ -73,7 +61,7 @@
                     <h3>TAKE A VIDEO TOUR</h3>
                     <div class="notice-video">
                         <div class="video-icon video-hover">
-                            <a class="video-popup" href="https://www.youtube.com/watch?v=to6Ghf8UL7o">
+                            <a class="video-popup" href="@Model.settings.NoticeVideoLink">
                                 <i class="zmdi zmdi-play"></i>
                             </a>
                         </div>
@@ -84,30 +72,7 @@
                 <div class="notice-left-wrapper">
                     <h3>notice board</h3>
                     <div class="notice-left">
-                        <div class="single-notice-left mb-23 pb-20">
-                            <h4>5, June 2017</h4>
-                            <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-                        </div>
-                        <div class="single-notice-left hidden-sm mb-23 pb-20">
-                            <h4>4, June 2017</h4>
-                            <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-                        </div>
-                        <div class="single-notice-left pb-70">
-                            <h4>3, June 2017</h4>
-                            <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-                        </div>
-                        <div class="single-notice-left mb-23 pb-20">
-                            <h4>5, June 2017</h4>
-                            <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-                        </div>
-                        <div class="single-notice-left hidden-sm mb-23 pb-20">
-                            <h4>4, June 2017</h4>
-                            <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-                        </div>
-                        <div class="single-notice-left pb-70">
-                            <h4>3, June 2017</h4>
-                            <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-                        </div>
+                        @await Html.PartialAsync("_NoticeBoardPartialView",Model.NoticeBoards)
                     </div>
                 </div>
             </div>

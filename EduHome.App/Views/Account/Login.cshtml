@@ -28,8 +28,8 @@
                             <span>Please login using account detail bellow.</span>
                         </div>
                         <div class="login-form">
-                            <div class="alert alert-danger" asp-validation-summary="ModelOnly"></div>
                             <form action="#" method="post">
+                            <div class="alert alert-danger" asp-validation-summary="ModelOnly"></div>
 
                                 <label asp-for="UserName">UserName</label>
                                 <input type="text" class="form-control" asp-for="@Model.UserName">
