@@ -3,12 +3,15 @@ using EduHome.App.Extentions;
 using EduHome.App.Helpers;
 using EduHome.App.Services.Interfaces;
 using EduHome.Core.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 namespace EduHome.App.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class CourseController : Controller
     {
         private readonly EduHomeAppDxbContext _context;
@@ -46,6 +49,11 @@ namespace EduHome.App.Areas.Admin.Controllers
                 return View(Course);
             }
 
+            if (Course.FormFile == null)
+            {
+                ModelState.AddModelError("FormFile", "Image can not be null");
+                return View(Course);
+            }
             if (Course == null)
             {
                 ModelState.AddModelError("Course", "Course  is required");
@@ -140,12 +148,12 @@ namespace EduHome.App.Areas.Admin.Controllers
             }
 
             List<CourseTag> RemovableTag = await _context.CourseTags.
-                Where(x => !Course.TagIds.Contains(x.TagId))
+                Where(x => !updatecourse.TagIds.Contains(x.TagId))
                 .ToListAsync();
 
             _context.CourseTags.RemoveRange(RemovableTag);
 
-            foreach (var item in Course.TagIds)
+            foreach (var item in updatecourse.TagIds)
             {
                 if (_context.CourseTags.Where(x => x.CourseId == id &&
                    x.TagId == item).Count() > 0)
@@ -164,10 +172,15 @@ namespace EduHome.App.Areas.Admin.Controllers
             }
 
 
-            Helper.removeimage(_env.WebRootPath, "assets/img/course", updatecourse.Image);
+            Helper.removeimage(_env.WebRootPath, "assets/img/course", Course.Image);
             Course.Image = updatecourse.FormFile?.createimage(_env.WebRootPath, "assets/img/course");
 
-            _context.Courses.Update(Course);
+            Course.Name = updatecourse.Name;
+            Course.Description = updatecourse.Description;
+            Course.Feature = updatecourse.Feature;
+            Course.Abouttext= updatecourse.Abouttext;
+            Course.Applytext = updatecourse.Applytext;
+            Course.Certification = updatecourse.Certification;
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));

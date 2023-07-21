@@ -1,0 +1,18 @@
+﻿@model NoticeBoard
+<div class="container">
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="Content">Name</label>
+            <input type="text" class="form-control" asp-for="@Model.Content">
+            <span class="alert-danger" asp-validation-for="@Model.Content"></span>
+            @Html.AntiForgeryToken()
+        </div>
+        <div class="form-group">
+            <label asp-for="DateTime">Date</label>
+            <input type="date" class="form-control" asp-for="@Model.DateTime">
+            <span class="alert-danger" asp-validation-for="@Model.DateTime"></span>
+            @Html.AntiForgeryToken()
+        </div>
+        <button type="submit">Create</button>
+    </form>
+</div>

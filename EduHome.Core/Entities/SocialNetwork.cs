@@ -13,5 +13,6 @@ namespace EduHome.Core.Entities
 
         public int TeacherId { get; set; }
         public Teacher? Teacher { get; set; }
+
     }
 }

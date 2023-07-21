@@ -1,11 +1,14 @@
 ﻿using EduHome.App.Context;
+using EduHome.App.Helpers;
 using EduHome.Core.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace EduHome.App.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class FeatureController : Controller
     {
         private readonly EduHomeAppDxbContext _context;

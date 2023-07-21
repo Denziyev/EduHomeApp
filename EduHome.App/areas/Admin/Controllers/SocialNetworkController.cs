@@ -1,6 +1,8 @@
 ﻿
 using EduHome.App.Context;
+using EduHome.App.Helpers;
 using EduHome.Core.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -8,6 +10,7 @@ using System.Collections.Generic;
 namespace EduHome.App.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class SocialNetworkController : Controller
     {
         private readonly EduHomeAppDxbContext _context;
@@ -37,7 +40,13 @@ namespace EduHome.App.Areas.Admin.Controllers
             ViewBag.Teachers = await _context.Teachers.Where(x => !x.IsDeleted).ToListAsync();
             if (!ModelState.IsValid)
             {
-                return View();
+                return View(socialNetwork);
+            }
+
+            if (socialNetwork.Icon == null)
+            {
+                ModelState.AddModelError("Icon", "Icon is reqired");
+                return View(socialNetwork);
             }
 
             socialNetwork.CreatedAt = DateTime.Now;
@@ -75,7 +84,14 @@ namespace EduHome.App.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            socialNetwork.Icon=updatesocialNetwork.Icon;
+
+			if (socialNetwork.Icon == null)
+			{
+				ModelState.AddModelError("Icon", "Icon is reqired");
+				return View(socialNetwork);
+			}
+
+			socialNetwork.Icon=updatesocialNetwork.Icon;
             socialNetwork.Link=updatesocialNetwork.Link;
             socialNetwork.UpdatedAt = DateTime.Now;
     

@@ -11,6 +11,7 @@ namespace EduHome.App.Context
 
         public DbSet<Teacher> Teachers { get; set; }
         public DbSet<SocialNetwork> SocialNetworks { get; set; }
+        public DbSet<SettingSocialNetwork> SettingSocialNetworks { get; set; }
         public DbSet<Skills> Skills { get; set; }
         public DbSet<Position> Positions { get; set; }
         public DbSet<Faculty> Faculties { get; set; }
@@ -25,6 +26,7 @@ namespace EduHome.App.Context
         public DbSet<Message> Messages { get; set; }
         public DbSet<Subscribe> Subscribes { get; set; }
         public DbSet<Setting> Settings { get; set; }
+        public DbSet<NoticeBoard> NoticeBoards { get; set; }
 
 
         public EduHomeAppDxbContext(DbContextOptions<EduHomeAppDxbContext> options) : base(options)
@@ -39,11 +41,11 @@ namespace EduHome.App.Context
                 .WithOne(b => b.Course)
                 .HasForeignKey<Feature>(b => b.CourseId);
 
-            modelBuilder.Entity<Setting>()
-        .HasMany(e => e.SocialNetworks)
-        .WithOne(e => e.Setting)
-        .HasForeignKey(e => e.SettingId)
-        .IsRequired();
+            //    modelBuilder.Entity<Setting>()
+            //.HasMany(e => e.SettingSocialNetworks)
+            //.WithOne(e => e.Setting)
+            //.HasForeignKey(e => e.SettingId)
+            //.IsRequired();
             base.OnModelCreating(modelBuilder);
         }
     }

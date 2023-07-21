@@ -24,7 +24,9 @@ namespace EduHome.App.Controllers
                        .Include(x => x.Position).Where(x => !x.IsDeleted)
                         .Include(x => x.Skills.Where(x => !x.IsDeleted))
                         .Include(x => x.SocialNetworks.Where(x => !x.IsDeleted))
-                       .ToListAsync()
+                       .ToListAsync(),
+                NoticeBoards = _context.NoticeBoards.Where(x => !x.IsDeleted).ToList(),
+                settings = await _context.Settings.Where(x => !x.IsDeleted).FirstOrDefaultAsync(),
             };
             return View(aboutViewModel);
         }

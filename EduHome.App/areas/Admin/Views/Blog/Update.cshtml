@@ -5,7 +5,7 @@
 
         <div class="form-group">
             <select class="form-select" asp-for="CategoryId" aria-label="Disabled select example">
-                <option selected>Choose Category</option>
+                <option >Choose Category</option>
                 @foreach (var item in ViewBag.Categories)
                 {
                     <option value="@item.Id">@item.Name</option>

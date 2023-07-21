@@ -1,26 +1,25 @@
 ﻿
-
 namespace EduHome.App.Helpers
 {
     public class Helper
     {
-        public static bool IsImage(IFormFile formFile)
+        public static bool IsImage(IFormFile file)
         {
-            return formFile.ContentType.Contains("Image");
+            return file.ContentType.Contains("image");
         }
-
-        public static bool IsSizeOk(IFormFile formFile,double size)
+        public static bool IsSizeOk(IFormFile file, int size)
         {
-            return (formFile.Length / 1024 / 1024) <= size;
+            return file.Length / 1024 / 1024 <= size;
         }
-
-        public static void removeimage(string root,string path,string filename)
+        public static void removeimage(string root, string path, string image)
         {
-            string FullPath=Path.Combine(root,path,filename);
+            string FullPath = Path.Combine(root, path, image);
             if (File.Exists(FullPath))
             {
                 File.Delete(FullPath);
             }
+
         }
+
     }
 }

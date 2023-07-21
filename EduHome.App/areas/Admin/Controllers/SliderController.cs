@@ -2,13 +2,16 @@
 using EduHome.App.Extentions;
 using EduHome.App.Helpers;
 using EduHome.Core.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 using System.Reflection.Metadata;
 
 namespace EduHome.App.areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class SliderController : Controller
     {
         private readonly EduHomeAppDxbContext _context;
@@ -42,13 +45,14 @@ namespace EduHome.App.areas.Admin.Controllers
             if (slider.FormFile == null)
             {
                 ModelState.AddModelError("FormFile", "File must be choosen");
+                return View(slider);
             }
 
-            //if (!Helper.IsImage(slider.FormFile))
-            //{
-            //    ModelState.AddModelError("FileForm", "File type must be image");
-            //    return View();
-            //}
+            if (!Helper.IsImage(slider.FormFile))
+            {
+                ModelState.AddModelError("FileForm", "File type must be image");
+                return View();
+            }
 
             if (!Helper.IsSizeOk(slider.FormFile, 1))
             {
@@ -81,25 +85,25 @@ namespace EduHome.App.areas.Admin.Controllers
         public async Task<IActionResult> Update(Slider updateslider, int id)
         {
             Slider? slider = await _context.Sliders.Where(x => !x.IsDeleted && x.Id == id).FirstOrDefaultAsync();
-            if (slider == null)
+            if (updateslider == null)
             {
                 return NotFound();
             }
             if (!ModelState.IsValid)
             {
-                return View(slider);
+                return View(updateslider);
             }
 
-            if (slider.FormFile != null)
+            if (updateslider.FormFile != null)
             {
 
-                //if (!Helper.IsImage(slider.FormFile))
-                //{
-                //    ModelState.AddModelError("FileForm", "File type must be image");
-                //    return View();
-                //}
+                if (!Helper.IsImage(updateslider.FormFile))
+                {
+                    ModelState.AddModelError("FileForm", "File type must be image");
+                    return View();
+                }
 
-                if (!Helper.IsSizeOk(slider.FormFile, 1))
+                if (!Helper.IsSizeOk(updateslider.FormFile, 1))
                 {
                     ModelState.AddModelError("FileForm", "File size must be less than 1mb");
                     return View();
@@ -109,6 +113,7 @@ namespace EduHome.App.areas.Admin.Controllers
 
                 slider.Image = updateslider.FormFile.createimage(_environment.WebRootPath, "assets/img/slider/");
             }
+            
 
             slider.Title = updateslider.Title;
             slider.UpdatedAt = DateTime.Now;

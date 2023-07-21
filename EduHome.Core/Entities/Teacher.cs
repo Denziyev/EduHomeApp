@@ -21,7 +21,7 @@ namespace EduHome.Core.Entities
 
         public int Experience { get; set; }
 
-        public string? Hobbies { get;set; }
+        public string Hobbies { get;set; }
 
         public string Mail { get; set; }
 

@@ -146,17 +146,22 @@
                     <li class="nav-item nav-profile dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
                             <img src="~/Admin/images/faces/face5.jpg" alt="profile" />
-                            <span class="nav-profile-name">Louis Barnett</span>
+                            <span class="nav-profile-name">@User.Identity.Name</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-                            <a class="dropdown-item">
-                                <i class="mdi mdi-settings text-primary"></i>
-                                Settings
-                            </a>
-                            <a class="dropdown-item">
-                                <i class="mdi mdi-logout text-primary"></i>
-                                Logout
-                            </a>
+                            @if (User.Identity.IsAuthenticated && User.IsInRole("Admin") || User.Identity.IsAuthenticated && User.IsInRole("SuperAdmin"))
+                            {
+                                <a class="dropdown-item">
+                                    <i class="mdi mdi-settings text-primary"></i>
+                                    @User.Identity.Name
+                                </a>
+                                <a class="dropdown-item" asp-controller="account" asp-action="logout">
+                                    <i class="mdi mdi-logout text-primary"></i>
+                                    Logout
+                                </a>
+
+                            }
+
                         </div>
                     </li>
                 </ul>
@@ -185,13 +190,26 @@
                         </a>
                         <div class="collapse" id="ui-basic">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="/admin/aboutwelcome"><span>AboutWelcome:</span></a></li>
-                                <li class="nav-item"> <a class="nav-link" href="/admin/slider"><span>Slider:</span></a></li>
-                                <li class="nav-item"> <a class="nav-link" href="/admin/teacher"><span>Teachers</span></a></li>
-                                <li class="nav-item"> <a class="nav-link" href="/admin/faculty"><span>Faculties:</span></a></li>
-                                <li class="nav-item"> <a class="nav-link" href="/admin/position"><span>Positions</span></a></li>
-                                <li class="nav-item"> <a class="nav-link" href="/admin/skills"><span>Skills</span></a></li>
-                                <li class="nav-item"> <a class="nav-link" href="/admin/socialnetwork"><span>Social Networks</span></a></li>
+                                <li class="nav-item"> <a class="nav-link" href="/admin/user/index"><span>Users:</span></a></li>
+                                <li class="nav-item"> <a class="nav-link" href="/admin/slider/index"><span>Slider:</span></a></li>
+                                <li class="nav-item"> <a class="nav-link" href="/admin/teacher/index"><span>Teachers</span></a></li>
+                                <li class="nav-item"> <a class="nav-link" href="/admin/faculty/index"><span>Faculties:</span></a></li>
+                                <li class="nav-item"> <a class="nav-link" href="/admin/position/index"><span>Positions</span></a></li>
+                                <li class="nav-item"> <a class="nav-link" href="/admin/skills/index"><span>Skills</span></a></li>
+                                <li class="nav-item"> <a class="nav-link" href="/admin/socialnetwork/index"><span>Social Networks</span></a></li>
+                                <li class="nav-item"> <a class="nav-link" href="/admin/blog/index"><span>Blogs</span></a></li>
+                                <li class="nav-item"> <a class="nav-link" href="/admin/Category/index"><span>Categories</span></a></li>
+                                <li class="nav-item"> <a class="nav-link" href="/admin/Contact/index"><span>Contacts</span></a></li>
+                                <li class="nav-item"> <a class="nav-link" href="/admin/Course/index"><span>Courses</span></a></li>
+                                <li class="nav-item"> <a class="nav-link" href="/admin/Feature/index"><span>Feature</span></a></li>
+                                <li class="nav-item"> <a class="nav-link" href="/admin/Noticeboard/index"><span>Notice Board</span></a></li>
+                                <li class="nav-item"> <a class="nav-link" href="/admin/Setting/index"><span>Setting</span></a></li>
+                                <li class="nav-item"> <a class="nav-link" href="/admin/SettingSocialNetwork/index"><span>Setting Social Networks</span></a></li>
+                                <li class="nav-item"> <a class="nav-link" href="/admin/Subscribe/index"><span>Subscribe</span></a></li>
+                                <li class="nav-item"> <a class="nav-link" href="/admin/Tag/index"><span>Tags</span></a></li>
+                            
+
+
 
                             </ul>
                         </div>

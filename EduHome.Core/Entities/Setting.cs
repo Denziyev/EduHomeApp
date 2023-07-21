@@ -11,7 +11,7 @@ namespace EduHome.Core.Entities
 {
     public class Setting:BaseModel
     {
-        public string Logo { get; set; }
+        public string? Logo { get; set; }
         [NotMapped]
         public IFormFile? LogoFormFile { get; set; }
 
@@ -20,7 +20,7 @@ namespace EduHome.Core.Entities
 
         public string DescriptionFooter { get; set; }
 
-        public List<SocialNetwork>? SocialNetworks { get; set; }
+        public List<SettingSocialNetwork>? settingSocialNetworks { get; set; }
         public string CityAdress { get; set; }
         public string StreetAdress { get; set; }
 

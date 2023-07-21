@@ -16,18 +16,24 @@ namespace EduHome.App.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            ContactViewModel contactViewModel = new ContactViewModel()
+            {
+                Settings = _context.Settings.Where(x => !x.IsDeleted).FirstOrDefault(),
+                
+            };
+            return View(contactViewModel);
         }
         [HttpPost]
         public async Task<IActionResult> SendMessage(string name,string email,string subject,string message)
         {
-            //if (name == null || subject == null || message == null || email == null)
-            //{
-            //    return RedirectToAction("index", "contact");
+            if (name == null || subject == null || message == null || email == null)
+            {
+                return RedirectToAction("index", "contact");
 
-            //}
+            }
 
             _context.Messages.Add(new Message { Name=name,Email=email,message=message,Subject=subject});
+            TempData["SendMessage"] = "Message is sended";
             _context.SaveChanges();
             return RedirectToAction("index","contact");
         }

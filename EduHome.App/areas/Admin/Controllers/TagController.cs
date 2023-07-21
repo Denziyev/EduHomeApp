@@ -1,13 +1,15 @@
 ﻿
 using EduHome.App.Context;
+using EduHome.App.Helpers;
 using EduHome.Core.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Arsha.App.areas.Admin.Controllers
 {
     [Area("Admin")]
-
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class TagController : Controller
     {
         private readonly EduHomeAppDxbContext _context;

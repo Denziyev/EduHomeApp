@@ -1,0 +1,36 @@
+﻿@using EduHome.App.Areas.Admin.Controllers;
+@using EduHome.App.Helpers;
+@model IEnumerable<AppUser>
+<div class="container">
+    <table class="table table-sm">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">UserName</th>
+                <th scope="col"> Email</th>
+                <th scope="col"> Email Confirmed</th>
+                <th scope="col">Role</th>
+                <th scope="col">Update</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row">@item.Id</th>
+                    <th>@item.UserName</th>
+                    <th>@item.Email</th>
+                    <th> @item.EmailConfirmed  </th>
+                    <th></th>
+                    <td><a asp-controller="Setting" asp-action="update" asp-route-id="@item.Id"><i class="fas fa-edit text text-primary"></i></a></td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+    @*  <div>
+    <a onclick="if (@Model.Count()==1){return false;}" asp-controller="Setting" asp-action="create" style="display: block; text-decoration: none; color: white; width: 100%; height: 100%"> <div style="width:100%; " class="btn btn-outline-success">Create Blog </div></a>
+    </div>*@
+
+</div>

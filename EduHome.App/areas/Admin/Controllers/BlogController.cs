@@ -3,13 +3,16 @@ using EduHome.App.Extentions;
 using EduHome.App.Helpers;
 using EduHome.App.Services.Interfaces;
 using EduHome.Core.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 namespace EduHome.App.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class BlogController : Controller
     {
         private readonly EduHomeAppDxbContext _context;
@@ -52,10 +55,34 @@ namespace EduHome.App.Areas.Admin.Controllers
             if (Blog == null)
             {
                 ModelState.AddModelError("Blog", "Blog  is required");
-                return View();
+                return View(Blog);
             }
 
-            Blog.Image = Blog.FormFile.createimage(_env.WebRootPath, "assets/img/Blog/");
+            if (Blog.Time == null)
+            {
+				ModelState.AddModelError("Time", "Time  is required");
+				return View(Blog);
+			}
+
+			if (Blog.FormFile == null)
+			{
+				ModelState.AddModelError("FormFile", "File must be choosen");
+				return View(Blog);
+			}
+
+			if (!Helper.IsImage(Blog.FormFile))
+			{
+				ModelState.AddModelError("FormFile", "File type must be image");
+				return View(Blog);
+			}
+
+			if (!Helper.IsSizeOk(Blog.FormFile, 1))
+			{
+				ModelState.AddModelError("FormFile", "File size must be less than 1mb");
+				return View(Blog);
+			}
+
+			Blog.Image = Blog.FormFile.createimage(_env.WebRootPath, "assets/img/Blog/");
             Blog.CreatedAt = DateTime.Now;
 
             foreach (var item in Blog.TagIds)
@@ -140,14 +167,31 @@ namespace EduHome.App.Areas.Admin.Controllers
             {
                 return View(Blog);
             }
+			if (updateBlog.FormFile == null)
+			{
+				ModelState.AddModelError("FormFile", "File must be choosen");
+				return View(updateBlog);
+			}
 
-            List<BlogTag> RemovableTag = await _context.BlogTags.
-                Where(x => !Blog.TagIds.Contains(x.TagId))
+			if (!Helper.IsImage(updateBlog.FormFile))
+			{
+				ModelState.AddModelError("FormFile", "File type must be image");
+				return View(updateBlog);
+			}
+
+			if (!Helper.IsSizeOk(updateBlog.FormFile, 1))
+			{
+				ModelState.AddModelError("FormFile", "File size must be less than 1mb");
+				return View(updateBlog);
+			}
+
+			List<BlogTag> RemovableTag = await _context.BlogTags.
+                Where(x => !updateBlog.TagIds.Contains(x.TagId))
                 .ToListAsync();
 
             _context.BlogTags.RemoveRange(RemovableTag);
 
-            foreach (var item in Blog.TagIds)
+            foreach (var item in updateBlog.TagIds)
             {
                 if (_context.BlogTags.Where(x => x.BlogId == id &&
                    x.TagId == item).Count() > 0)
@@ -164,12 +208,17 @@ namespace EduHome.App.Areas.Admin.Controllers
                 }
 
             }
+           
 
+            Helper.removeimage(_env.WebRootPath, "assets/img/blog", Blog.Image);
+            Blog.Image = updateBlog.FormFile?.createimage(_env.WebRootPath, "assets/img/blog");
 
-            Helper.removeimage(_env.WebRootPath, "assets/img/Blog", updateBlog.Image);
-            Blog.Image = updateBlog.FormFile?.createimage(_env.WebRootPath, "assets/img/Blog");
-
-            _context.Blogs.Update(Blog);
+            Blog.Writer = updateBlog.Writer;
+            Blog.Content= updateBlog.Content;
+            Blog.Title= updateBlog.Title;
+            Blog.CategoryId = updateBlog.CategoryId;
+            Blog.UpdatedAt=DateTime.Now;
+           
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));

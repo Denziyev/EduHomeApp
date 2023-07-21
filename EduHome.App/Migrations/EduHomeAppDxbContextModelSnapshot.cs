@@ -399,6 +399,35 @@ namespace EduHome.App.Migrations
                     b.ToTable("Messages");
                 });
 
+            modelBuilder.Entity("EduHome.Core.Entities.NoticeBoard", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("NoticeBoards");
+                });
+
             modelBuilder.Entity("EduHome.Core.Entities.Position", b =>
                 {
                     b.Property<int>("Id")
@@ -457,7 +486,6 @@ namespace EduHome.App.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("Logo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MailFooter")
@@ -525,6 +553,41 @@ namespace EduHome.App.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Settings");
+                });
+
+            modelBuilder.Entity("EduHome.Core.Entities.SettingSocialNetwork", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Icon")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Link")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("SettingId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SettingId");
+
+                    b.ToTable("SettingSocialNetworks");
                 });
 
             modelBuilder.Entity("EduHome.Core.Entities.Skills", b =>
@@ -621,9 +684,6 @@ namespace EduHome.App.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("SettingId")
-                        .HasColumnType("int");
-
                     b.Property<int>("TeacherId")
                         .HasColumnType("int");
 
@@ -631,8 +691,6 @@ namespace EduHome.App.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("SettingId");
 
                     b.HasIndex("TeacherId");
 
@@ -721,6 +779,7 @@ namespace EduHome.App.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Hobbies")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Image")
@@ -960,6 +1019,17 @@ namespace EduHome.App.Migrations
                     b.Navigation("Course");
                 });
 
+            modelBuilder.Entity("EduHome.Core.Entities.SettingSocialNetwork", b =>
+                {
+                    b.HasOne("EduHome.Core.Entities.Setting", "Setting")
+                        .WithMany("settingSocialNetworks")
+                        .HasForeignKey("SettingId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Setting");
+                });
+
             modelBuilder.Entity("EduHome.Core.Entities.Skills", b =>
                 {
                     b.HasOne("EduHome.Core.Entities.Teacher", "Teacher")
@@ -973,19 +1043,11 @@ namespace EduHome.App.Migrations
 
             modelBuilder.Entity("EduHome.Core.Entities.SocialNetwork", b =>
                 {
-                    b.HasOne("EduHome.Core.Entities.Setting", "Setting")
-                        .WithMany("SocialNetworks")
-                        .HasForeignKey("SettingId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("EduHome.Core.Entities.Teacher", "Teacher")
                         .WithMany("SocialNetworks")
                         .HasForeignKey("TeacherId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Setting");
 
                     b.Navigation("Teacher");
                 });
@@ -1081,7 +1143,7 @@ namespace EduHome.App.Migrations
 
             modelBuilder.Entity("EduHome.Core.Entities.Setting", b =>
                 {
-                    b.Navigation("SocialNetworks");
+                    b.Navigation("settingSocialNetworks");
                 });
 
             modelBuilder.Entity("EduHome.Core.Entities.Tag", b =>

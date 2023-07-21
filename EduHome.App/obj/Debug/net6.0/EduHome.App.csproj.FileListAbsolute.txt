@@ -12,6 +12,8 @@ C:\Users\VO\Desktop\MVC\EduHome.App\EduHome.App\bin\Debug\net6.0\MailKit.dll
 C:\Users\VO\Desktop\MVC\EduHome.App\EduHome.App\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\VO\Desktop\MVC\EduHome.App\EduHome.App\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\VO\Desktop\MVC\EduHome.App\EduHome.App\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\VO\Desktop\MVC\EduHome.App\EduHome.App\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\VO\Desktop\MVC\EduHome.App\EduHome.App\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\VO\Desktop\MVC\EduHome.App\EduHome.App\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\VO\Desktop\MVC\EduHome.App\EduHome.App\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\VO\Desktop\MVC\EduHome.App\EduHome.App\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -30,6 +32,8 @@ C:\Users\VO\Desktop\MVC\EduHome.App\EduHome.App\bin\Debug\net6.0\Microsoft.Ident
 C:\Users\VO\Desktop\MVC\EduHome.App\EduHome.App\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\VO\Desktop\MVC\EduHome.App\EduHome.App\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\VO\Desktop\MVC\EduHome.App\EduHome.App\bin\Debug\net6.0\MimeKit.dll
+C:\Users\VO\Desktop\MVC\EduHome.App\EduHome.App\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\VO\Desktop\MVC\EduHome.App\EduHome.App\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
 C:\Users\VO\Desktop\MVC\EduHome.App\EduHome.App\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
 C:\Users\VO\Desktop\MVC\EduHome.App\EduHome.App\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\VO\Desktop\MVC\EduHome.App\EduHome.App\bin\Debug\net6.0\System.Drawing.Common.dll

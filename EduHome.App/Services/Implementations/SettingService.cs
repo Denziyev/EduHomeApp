@@ -15,7 +15,7 @@ namespace EduHome.App.Services.Implementations
         }
         public async Task<Setting?> Get()
         {
-            Setting? setting = await _context.Settings.Where(x=>!x.IsDeleted).FirstOrDefaultAsync();
+            Setting? setting = await _context.Settings.Where(x=>!x.IsDeleted).Include(x=>x.settingSocialNetworks).FirstOrDefaultAsync();
           
             return setting;
         }
