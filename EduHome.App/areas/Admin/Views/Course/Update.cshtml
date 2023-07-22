@@ -17,11 +17,11 @@
 
         <div class="form-group">
             <select multiple class="form-select" asp-for="TagIds" aria-label="Disabled select example">
-                <option >Choose Tags</option>
+                <option>Choose Tags</option>
                 @foreach (var item in ViewBag.Tags)
                 {
                     if (Model.CourseTags.Any(x => x.TagId == item.Id))
-                    {                       
+                    {
                         <option selected value="@item.Id">@item.Name</option>
                     }
                     else
@@ -33,6 +33,7 @@
             </select>
             <span class="alert-danger" asp-validation-for="TagIds"></span>
         </div>
+
 
         <div class="form-group">
             <label asp-for="Name">Name</label>

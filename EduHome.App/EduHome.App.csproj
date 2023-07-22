@@ -11,6 +11,7 @@
     <Folder Include="Areas\Admin\Views\Slider\" />
     <Folder Include="areas\Admin\Views\SocialNetwork\" />
     <Folder Include="areas\Admin\Views\Teacher\" />
+    <Folder Include="Migrations\" />
     <Folder Include="wwwroot\Admin\" />
   </ItemGroup>
 
@@ -29,6 +30,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.15" />
   </ItemGroup>
 
   <ItemGroup>

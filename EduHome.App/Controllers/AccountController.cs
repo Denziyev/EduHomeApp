@@ -52,6 +52,7 @@ namespace EduHome.App.Controllers
                 return View(registerViewModel);
             }
             await _userManager.AddToRoleAsync(appUser, "User");
+            
 
             string token = await _userManager.GenerateEmailConfirmationTokenAsync(appUser);
 
@@ -84,12 +85,21 @@ namespace EduHome.App.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel loginViewModel)
         {
+            if (!ModelState.IsValid)
+            {
+                return View(loginViewModel);
+            }
 
             AppUser appUser = await _userManager.FindByNameAsync(loginViewModel.UserName);
             if (appUser == null)
             {
                 ModelState.AddModelError("", "username or password is incorret");
-                return View();
+                return View(loginViewModel);
+            }
+            if (!await _userManager.IsInRoleAsync(appUser, "User"))
+            {
+                ModelState.AddModelError("", "It is not for Admin");
+                return View(loginViewModel);
             }
             var result = await _signinManager.PasswordSignInAsync(appUser, loginViewModel.Password, loginViewModel.isRememberMe, true);
             if (!result.Succeeded)

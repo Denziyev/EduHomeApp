@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Pm6OWdFBpzhb05GP6huIoWzffaCgaz2wrFc/pgGGAwE=",
+  "Hash": "GRFBkThLQedEj4XDcQARvSoWrxo+DUupBCVgIWiv58U=",
   "Source": "EduHome.App",
   "BasePath": "_content/EduHome.App",
   "Mode": "Default",
@@ -3196,6 +3196,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\blog\\0e693798-0340-40e6-abf9-73a67b9b1218AMANDA WATKINS.png"
     },
     {
+      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\blog\\2b4e60f1-34d0-484e-a113-136556ccc9b2BEVERLY CLARK.png",
+      "SourceId": "EduHome.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\",
+      "BasePath": "_content/EduHome.App",
+      "RelativePath": "assets/img/blog/2b4e60f1-34d0-484e-a113-136556ccc9b2BEVERLY CLARK.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\blog\\2b4e60f1-34d0-484e-a113-136556ccc9b2BEVERLY CLARK.png"
+    },
+    {
       "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\blog\\34bb7149-d65a-4791-883d-d1b55d62ff07Amanda Jepson.jpg",
       "SourceId": "EduHome.App",
       "SourceType": "Discovered",
@@ -3485,23 +3502,6 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\blog\\blog-img.jpg"
     },
     {
-      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\blog\\c3df1a5e-8a80-4907-a33d-c1a11e7e1894BEVERLY CLARK.png",
-      "SourceId": "EduHome.App",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\",
-      "BasePath": "_content/EduHome.App",
-      "RelativePath": "assets/img/blog/c3df1a5e-8a80-4907-a33d-c1a11e7e1894BEVERLY CLARK.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\blog\\c3df1a5e-8a80-4907-a33d-c1a11e7e1894BEVERLY CLARK.png"
-    },
-    {
       "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\blog\\d455ecfc-baf7-4263-9ec6-2e510b1a834fpost3.jpg",
       "SourceId": "EduHome.App",
       "SourceType": "Discovered",
@@ -3738,6 +3738,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\course\\5ff82683-63d4-4b19-aa2f-23896e130eebcourse1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\course\\6377de20-b329-46b8-a52f-5de95955a0afAMANDA WATKINS.png",
+      "SourceId": "EduHome.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\",
+      "BasePath": "_content/EduHome.App",
+      "RelativePath": "assets/img/course/6377de20-b329-46b8-a52f-5de95955a0afAMANDA WATKINS.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\course\\6377de20-b329-46b8-a52f-5de95955a0afAMANDA WATKINS.png"
     },
     {
       "Identity": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\course\\960f20bc-ee57-4145-a161-c65ecb0a460dcourse3.jpg",

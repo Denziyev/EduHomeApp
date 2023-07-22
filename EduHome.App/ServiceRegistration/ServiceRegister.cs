@@ -13,7 +13,7 @@ namespace EduHome.App.ServiceRegistration
         public static void Register(this IServiceCollection service, IConfiguration configuration)
         {
             service.AddScoped<IMailService, MailService>();
-
+          
             service.AddScoped<ISettingService, SettingService>();
 
             service.AddIdentity<AppUser, IdentityRole>()

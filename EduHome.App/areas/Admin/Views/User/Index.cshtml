@@ -1,6 +1,7 @@
 ﻿@using EduHome.App.Areas.Admin.Controllers;
 @using EduHome.App.Helpers;
-@model IEnumerable<AppUser>
+@using EduHome.App.Services.Interfaces;
+
 <div class="container">
     <table class="table table-sm">
         <thead>
@@ -22,15 +23,26 @@
                     <th>@item.UserName</th>
                     <th>@item.Email</th>
                     <th> @item.EmailConfirmed  </th>
-                    <th></th>
+                   <th></th>
+               
                     <td><a asp-controller="Setting" asp-action="update" asp-route-id="@item.Id"><i class="fas fa-edit text text-primary"></i></a></td>
                 </tr>
             }
 
+
         </tbody>
     </table>
-    @*  <div>
-    <a onclick="if (@Model.Count()==1){return false;}" asp-controller="Setting" asp-action="create" style="display: block; text-decoration: none; color: white; width: 100%; height: 100%"> <div style="width:100%; " class="btn btn-outline-success">Create Blog </div></a>
-    </div>*@
+  @*  <form method="post">
+
+    <div class="alert alert-danger" asp-validation-summary="ModelOnly"></div>
+      <div class="form-group">
+            <label asp-for="Content">Content</label>
+            <input type="text" class="form-control" asp-for="">
+            <span class="alert-danger" asp-validation-for="Content"></span>
+        </div>
+       
+        @Html.AntiForgeryToken()
+        <button type="submit">Create</button>
+    </form>*@
 
 </div>

@@ -745,6 +745,10 @@
       "PackagePath": "staticwebassets\\assets\\img\\blog\\0e693798-0340-40e6-abf9-73a67b9b1218AMANDA WATKINS.png"
     },
     {
+      "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\blog\\2b4e60f1-34d0-484e-a113-136556ccc9b2BEVERLY CLARK.png",
+      "PackagePath": "staticwebassets\\assets\\img\\blog\\2b4e60f1-34d0-484e-a113-136556ccc9b2BEVERLY CLARK.png"
+    },
+    {
       "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\blog\\34bb7149-d65a-4791-883d-d1b55d62ff07Amanda Jepson.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\blog\\34bb7149-d65a-4791-883d-d1b55d62ff07Amanda Jepson.jpg"
     },
@@ -813,10 +817,6 @@
       "PackagePath": "staticwebassets\\assets\\img\\blog\\blog9.jpg"
     },
     {
-      "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\blog\\c3df1a5e-8a80-4907-a33d-c1a11e7e1894BEVERLY CLARK.png",
-      "PackagePath": "staticwebassets\\assets\\img\\blog\\c3df1a5e-8a80-4907-a33d-c1a11e7e1894BEVERLY CLARK.png"
-    },
-    {
       "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\blog\\d455ecfc-baf7-4263-9ec6-2e510b1a834fpost3.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\blog\\d455ecfc-baf7-4263-9ec6-2e510b1a834fpost3.jpg"
     },
@@ -871,6 +871,10 @@
     {
       "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\course\\5ff82683-63d4-4b19-aa2f-23896e130eebcourse1.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\course\\5ff82683-63d4-4b19-aa2f-23896e130eebcourse1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\course\\6377de20-b329-46b8-a52f-5de95955a0afAMANDA WATKINS.png",
+      "PackagePath": "staticwebassets\\assets\\img\\course\\6377de20-b329-46b8-a52f-5de95955a0afAMANDA WATKINS.png"
     },
     {
       "Id": "C:\\Users\\VO\\Desktop\\MVC\\EduHome.App\\EduHome.App\\wwwroot\\assets\\img\\course\\960f20bc-ee57-4145-a161-c65ecb0a460dcourse3.jpg",

@@ -103,6 +103,8 @@ namespace EduHome.App.Areas.Admin.Controllers
             {
                 return View();
             }
+
+            _context.Courses.Where(x => !x.IsDeleted && x.Feature == Feature).FirstOrDefault().Feature = null;
             Feature.IsDeleted = true;
             await _context.SaveChangesAsync();
             return RedirectToAction("Index", "Feature");

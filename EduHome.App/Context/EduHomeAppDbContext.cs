@@ -28,7 +28,6 @@ namespace EduHome.App.Context
         public DbSet<Setting> Settings { get; set; }
         public DbSet<NoticeBoard> NoticeBoards { get; set; }
 
-
         public EduHomeAppDxbContext(DbContextOptions<EduHomeAppDxbContext> options) : base(options)
         {
 

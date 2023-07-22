@@ -158,7 +158,7 @@ namespace EduHome.App.Areas.Admin.Controllers
                 ThenInclude(x => x.Tag).
                 FirstOrDefaultAsync();
 
-            if (Blog == null)
+            if (updateBlog == null)
             {
                 return NotFound();
             }

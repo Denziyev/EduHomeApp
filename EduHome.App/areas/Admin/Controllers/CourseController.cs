@@ -48,16 +48,28 @@ namespace EduHome.App.Areas.Admin.Controllers
             {
                 return View(Course);
             }
+            if (Course == null)
+            {
+                ModelState.AddModelError("Course", "Course  is required");
+                return View();
+            }
 
             if (Course.FormFile == null)
             {
                 ModelState.AddModelError("FormFile", "Image can not be null");
                 return View(Course);
             }
-            if (Course == null)
+
+            if (!Helper.IsImage(Course.FormFile))
             {
-                ModelState.AddModelError("Course", "Course  is required");
-                return View();
+                ModelState.AddModelError("FormFile", "File type must be image");
+                return View(Course);
+            }
+
+            if (!Helper.IsSizeOk(Course.FormFile, 1))
+            {
+                ModelState.AddModelError("FormFile", "File size must be less than 1mb");
+                return View(Course);
             }
 
             Course.Image = Course.FormFile.createimage(_env.WebRootPath, "assets/img/course/");
@@ -122,22 +134,22 @@ namespace EduHome.App.Areas.Admin.Controllers
 
 
 
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Update(int id, Course updatecourse)
+        public async Task<IActionResult> Update(int id, Course updateCourse)
         {
             ViewBag.Categories = await _context.Categories.Where(x => !x.IsDeleted).ToListAsync();
             ViewBag.Tags = await _context.Tags.Where(x => !x.IsDeleted).ToListAsync();
 
             Course? Course = await _context.Courses.
                 Where(x => !x.IsDeleted && x.Id == id).
-                Include(x => x.Feature).Where(x => !x.IsDeleted).
                 Include(x => x.Category).Where(x => !x.IsDeleted).
                 Include(x => x.CourseTags.Where(x => !x.IsDeleted)).
                 ThenInclude(x => x.Tag).
                 FirstOrDefaultAsync();
 
-            if (Course == null)
+            if (updateCourse == null)
             {
                 return NotFound();
             }
@@ -147,13 +159,14 @@ namespace EduHome.App.Areas.Admin.Controllers
                 return View(Course);
             }
 
+
             List<CourseTag> RemovableTag = await _context.CourseTags.
-                Where(x => !updatecourse.TagIds.Contains(x.TagId))
+                Where(x => !updateCourse.TagIds.Contains(x.TagId))
                 .ToListAsync();
 
             _context.CourseTags.RemoveRange(RemovableTag);
 
-            foreach (var item in updatecourse.TagIds)
+            foreach (var item in updateCourse.TagIds)
             {
                 if (_context.CourseTags.Where(x => x.CourseId == id &&
                    x.TagId == item).Count() > 0)
@@ -171,16 +184,35 @@ namespace EduHome.App.Areas.Admin.Controllers
 
             }
 
+            if (updateCourse.FormFile == null)
+            {
+                ModelState.AddModelError("FormFile", "File must be choosen");
+                return View(updateCourse);
+            }
 
-            Helper.removeimage(_env.WebRootPath, "assets/img/course", Course.Image);
-            Course.Image = updatecourse.FormFile?.createimage(_env.WebRootPath, "assets/img/course");
+            if (!Helper.IsImage(updateCourse.FormFile))
+            {
+                ModelState.AddModelError("FormFile", "File type must be image");
+                return View(updateCourse);
+            }
 
-            Course.Name = updatecourse.Name;
-            Course.Description = updatecourse.Description;
-            Course.Feature = updatecourse.Feature;
-            Course.Abouttext= updatecourse.Abouttext;
-            Course.Applytext = updatecourse.Applytext;
-            Course.Certification = updatecourse.Certification;
+            if (!Helper.IsSizeOk(updateCourse.FormFile, 1))
+            {
+                ModelState.AddModelError("FormFile", "File size must be less than 1mb");
+                return View(updateCourse);
+            }
+
+
+            Helper.removeimage(_env.WebRootPath, "assets/img/Course", Course.Image);
+            Course.Image = updateCourse.FormFile?.createimage(_env.WebRootPath, "assets/img/Course");
+
+            Course.Name = updateCourse.Name;
+            Course.Description = updateCourse.Description;
+            Course.Feature = updateCourse.Feature;
+            Course.Abouttext = updateCourse.Abouttext;
+            Course.Applytext = updateCourse.Applytext;
+            Course.Certification = updateCourse.Certification;
+            Course.UpdatedAt = DateTime.Now;
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
