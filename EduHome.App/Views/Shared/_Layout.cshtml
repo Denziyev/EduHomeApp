@@ -4,6 +4,42 @@
 @{
     Setting? setting = await settingService.Get();
 }
+@if (!string.IsNullOrWhiteSpace((string)TempData["Register"]))
+{
+    <div style="display:none" id="message">@TempData["Register"]</div>
+}
+@if (!string.IsNullOrWhiteSpace((string)TempData["SendMessage"]))
+{
+    <div style="display:none" id="message">@TempData["SendMessage"]</div>
+}
+@if (!string.IsNullOrWhiteSpace((string)TempData["ForgetPassword"]))
+{
+    <div style="display:none" id="message">@TempData["ForgetPassword"]</div>
+}
+@if (!string.IsNullOrWhiteSpace((string)TempData["Login"]))
+{
+    <div style="display:none" id="message">@TempData["Login"]</div>
+}
+@if (!string.IsNullOrWhiteSpace((string)TempData["Logout"]))
+{
+    <div style="display:none" id="message">@TempData["Logout"]</div>
+}
+@if (!string.IsNullOrWhiteSpace((string)TempData["SendEmailno"]))
+{
+    <div style="display:none" id="message">@TempData["SendEmailno"]</div>
+}
+@if (!string.IsNullOrWhiteSpace((string)TempData["SendEmail"]))
+{
+    <div style="display:none" id="message">@TempData["SendEmail"]</div>
+}
+@if (!string.IsNullOrWhiteSpace((string)TempData["ResetPassword"]))
+{
+    <div style="display:none" id="message">@TempData["ResetPassword"]</div>
+}
+@if (!string.IsNullOrWhiteSpace((string)TempData["UserUpdate"]))
+{
+    <div style="display:none" id="message">@TempData["UserUpdate"]</div>
+}
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -277,3 +313,15 @@
 
 <!-- Mirrored from demo.devitems.com/eduhome/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Jun 2020 19:41:25 GMT -->
 </html>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        const Message = document.getElementById("message");
+        if (Message != undefined) {
+            const message = Message.innerHTML;
+            if (message != "") {
+                Swal.fire(`${message}`)
+            }
+
+        }</script>

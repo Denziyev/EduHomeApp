@@ -33,8 +33,8 @@ namespace EduHome.App.Controllers
             }
 
             _context.Messages.Add(new Message { Name=name,Email=email,message=message,Subject=subject});
-            TempData["SendMessage"] = "Message is sended";
             _context.SaveChanges();
+            TempData["SendMessage"] = "Message is sended";
             return RedirectToAction("index","contact");
         }
     }

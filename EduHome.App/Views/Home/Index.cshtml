@@ -1,22 +1,6 @@
 ﻿@using EduHome.App.ViewModels;
 ﻿
-@if (!string.IsNullOrWhiteSpace((string)TempData["register"]))
-{
-    <div style="display:none" id="message">@TempData["register"]</div>
-}
 
-@if (!string.IsNullOrWhiteSpace((string)TempData["Forget"]))
-{
-    <div style="display:none" id="message">@TempData["Forget"]</div>
-}
-@if (!string.IsNullOrWhiteSpace((string)TempData["Login"]))
-{
-    <div style="display:none" id="message">@TempData["Login"]</div>
-}
-@if (!string.IsNullOrWhiteSpace((string)TempData["Logout"]))
-{
-    <div style="display:none" id="message">@TempData["Logout"]</div>
-}
 
 @model HomeViewModel 
 
@@ -111,7 +95,7 @@
                             <h3>TAKE A VIDEO TOUR</h3>
                             <div class="notice-video">
                                 <div class="video-icon video-hover">
-                                    <a class="video-popup" href="@Model.settings.NoticeVideoLink">
+                                    <a  href="@Model.settings.NoticeVideoLink">
                                         <i class="zmdi zmdi-play"></i>
                                     </a>
                                 </div>

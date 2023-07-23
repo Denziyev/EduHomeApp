@@ -25,12 +25,16 @@ namespace Arsha.App.Areas.Admin.Controllers
 			_environment = environment;
 			_mailService = mailService;
 		}
-		public async Task<IActionResult> Index()
+		public async Task<IActionResult> Index(int page = 1)
         {
+            int TotalCount = _context.Teachers.Where(x => !x.IsDeleted).Count();
+            ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 4);
+            ViewBag.CurrentPage = page;
+
             IEnumerable<Teacher> Teachers = await _context.Teachers.Include(x => x.SocialNetworks).
                 Where(c => !c.IsDeleted).Include(x => x.Position).
                 Where(c => !c.IsDeleted).Include(x => x.Faculty).
-				Where(c => !c.IsDeleted).ToListAsync();
+				Where(c => !c.IsDeleted).Skip((page - 1) * 4).Take(4).ToListAsync(); 
             return View(Teachers);
         }
         [HttpGet]

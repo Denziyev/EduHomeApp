@@ -14,21 +14,34 @@ namespace EduHome.App.Controllers
         {
             _context = context;
         }
-        public IActionResult Index(int page=1)
+        public IActionResult Index(int page=1,int id=0)
         {
             int TotalCount = _context.Blogs.Where(x => !x.IsDeleted).Count();
-            ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 2);
-            BlogViewModel BlogViewModel = new BlogViewModel()
+            ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 4);
+            BlogViewModel BlogViewModel = new BlogViewModel();
+            
+                 if (id != 0)
             {
-                Blogs = _context.Blogs.Where(x => !x.IsDeleted).
+                BlogViewModel.Blogs = _context.Blogs.Where(x => !x.IsDeleted && x.CategoryId == id).
+              Include(x => x.Category).Where(x => !x.IsDeleted).
+              Include(x => x.BlogTags.Where(x => !x.IsDeleted)).
+              ThenInclude(x => x.Tag).Skip((page - 1) * 4).Take(4).
+              ToList();
+            }
+            else
+            {
+
+
+                BlogViewModel.Blogs = _context.Blogs.Where(x => !x.IsDeleted).
                 Include(x => x.Category).Where(x => !x.IsDeleted).
                 Include(x => x.BlogTags.Where(x => !x.IsDeleted)).
-                ThenInclude(x => x.Tag).Skip((page - 1) * 2).Take(2).
-                ToList(),
-                Tags= _context.Tags.Where(x => !x.IsDeleted).ToList(),
-                Categories=_context.Categories.Where(x => !x.IsDeleted).ToList(),
+                ThenInclude(x => x.Tag).Skip((page - 1) * 4).Take(4).
+                ToList();
+            }
+            BlogViewModel.Tags = _context.Tags.Where(x => !x.IsDeleted).ToList();
+            BlogViewModel.Categories = _context.Categories.Where(x => !x.IsDeleted).ToList();
 
-            };
+            
             return View(BlogViewModel);
         }
         public async Task<IActionResult> Detail(int id)

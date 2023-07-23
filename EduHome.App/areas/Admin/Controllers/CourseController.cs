@@ -140,7 +140,7 @@ namespace EduHome.App.Areas.Admin.Controllers
         public async Task<IActionResult> Update(int id, Course updateCourse)
         {
             ViewBag.Categories = await _context.Categories.Where(x => !x.IsDeleted).ToListAsync();
-            ViewBag.Tags = await _context.Tags.Where(x => !x.IsDeleted).ToListAsync();
+            ViewBag.Tags = await _context.CourseTags.Where(x => !x.IsDeleted).ToListAsync();
 
             Course? Course = await _context.Courses.
                 Where(x => !x.IsDeleted && x.Id == id).
@@ -157,6 +157,25 @@ namespace EduHome.App.Areas.Admin.Controllers
             if (!ModelState.IsValid)
             {
                 return View(Course);
+            }
+
+
+            if (updateCourse.FormFile == null)
+            {
+                ModelState.AddModelError("FormFile", "File must be choosen");
+                return View(updateCourse);
+            }
+
+            if (!Helper.IsImage(updateCourse.FormFile))
+            {
+                ModelState.AddModelError("FormFile", "File type must be image");
+                return View(updateCourse);
+            }
+
+            if (!Helper.IsSizeOk(updateCourse.FormFile, 1))
+            {
+                ModelState.AddModelError("FormFile", "File size must be less than 1mb");
+                return View(updateCourse);
             }
 
 
@@ -183,25 +202,6 @@ namespace EduHome.App.Areas.Admin.Controllers
                 }
 
             }
-
-            if (updateCourse.FormFile == null)
-            {
-                ModelState.AddModelError("FormFile", "File must be choosen");
-                return View(updateCourse);
-            }
-
-            if (!Helper.IsImage(updateCourse.FormFile))
-            {
-                ModelState.AddModelError("FormFile", "File type must be image");
-                return View(updateCourse);
-            }
-
-            if (!Helper.IsSizeOk(updateCourse.FormFile, 1))
-            {
-                ModelState.AddModelError("FormFile", "File size must be less than 1mb");
-                return View(updateCourse);
-            }
-
 
             Helper.removeimage(_env.WebRootPath, "assets/img/Course", Course.Image);
             Course.Image = updateCourse.FormFile?.createimage(_env.WebRootPath, "assets/img/Course");

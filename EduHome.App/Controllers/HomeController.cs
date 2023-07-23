@@ -44,8 +44,14 @@ namespace EduHome.App.Controllers
             {
                 return RedirectToAction("Index", "Home");
             }
+            if(await _context.Subscribes.Where(x=>!x.IsDeleted).AnyAsync(x=>x.Email== email))
+            {
+                TempData["SendEmailno"] = "This email is already subscribed";
+                return RedirectToAction("Index", "Home");
+            }
             _context.Subscribes?.AddAsync(new Subscribe {  Email = email,CreatedAt=DateTime.Now});
             _context.SaveChanges();
+            TempData["SendEmail"] = "Subscribed succesfully";
             return RedirectToAction("Index","Home");   
             
         }

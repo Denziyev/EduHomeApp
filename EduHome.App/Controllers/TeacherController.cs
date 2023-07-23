@@ -17,14 +17,14 @@ namespace EduHome.App.Controllers
         public async Task< IActionResult> Index(int page=1)
         {
             int TotalCount = _context.Teachers.Where(x => !x.IsDeleted).Count();
-            ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 2);
+            ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 4);
             TeacherViewModel teacherViewModel = new TeacherViewModel
             {
                 Teachers = await _context.Teachers.Where(x => !x.IsDeleted)
                       .Include(x => x.Faculty).Where(x => !x.IsDeleted)
                        .Include(x => x.Position).Where(x => !x.IsDeleted)
                         .Include(x => x.Skills.Where(x => !x.IsDeleted))
-                        .Include(x => x.SocialNetworks.Where(x => !x.IsDeleted)).Skip((page - 1) * 2).Take(2)
+                        .Include(x => x.SocialNetworks.Where(x => !x.IsDeleted)).Skip((page - 1) * 4).Take(4)
                        .ToListAsync()
             };
 

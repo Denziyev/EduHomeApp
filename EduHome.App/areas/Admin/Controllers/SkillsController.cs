@@ -4,6 +4,7 @@ using EduHome.App.Helpers;
 using EduHome.Core.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
@@ -20,9 +21,13 @@ namespace EduHome.App.Areas.Admin.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1)
         {
-            IEnumerable<Skills> Skills = await _context.Skills.Include(x => x.Teacher).Where(x => !x.IsDeleted).ToListAsync();
+            int TotalCount = _context.Skills.Where(x => !x.IsDeleted).Count();
+            ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 4);
+            ViewBag.CurrentPage = page;
+
+            IEnumerable<Skills> Skills = await _context.Skills.Include(x => x.Teacher).Where(x => !x.IsDeleted).Skip((page - 1) * 4).Take(4).ToListAsync();
             return View(Skills);
         }
 

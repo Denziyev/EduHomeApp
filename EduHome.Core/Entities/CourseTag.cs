@@ -15,3 +15,10 @@ namespace EduHome.Core.Entities
 
     }
 }
+
+
+
+
+
+
+

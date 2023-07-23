@@ -62,7 +62,7 @@ namespace EduHome.App.Controllers
 
             await _mailService.Send("ilkinhd@code.edu.az", appUser.Email, link, "Verify email","Click me for Verify Email");
 
-            TempData["register"] = "Please,verify your email";
+            TempData["Register"] = "Please,verify your email";
             return RedirectToAction("index", "home");
         }
 
@@ -121,6 +121,7 @@ namespace EduHome.App.Controllers
         public async Task<IActionResult> Logout()
         {
             await _signinManager.SignOutAsync();
+            TempData["Logout"] = "Logged out";
 
             return RedirectToAction("index", "home");
         }
@@ -154,6 +155,7 @@ namespace EduHome.App.Controllers
                 protocol: Request.Scheme);
 
             await _mailService.Send("ilkinhd@code.edu.az", user.Email, link, "Reset password","Click me for Reset Password");
+            TempData["ForgetPassword"] = "Please,Check your email";
             return RedirectToAction("index", "home");
         }
         [HttpGet]
@@ -184,6 +186,7 @@ namespace EduHome.App.Controllers
             {
                 return Json(result.Errors);
             }
+            TempData["ResetPassword"] = "Password was changed succesfully";
             return RedirectToAction("login", "account");
 
         }
@@ -198,7 +201,7 @@ namespace EduHome.App.Controllers
             }
             UserUpdateViewModel userUpdateView = new UserUpdateViewModel
             {
-                Name = user.UserName,
+                Name = user.Name,
                 Surname = user.Surname,
                 Email = user.Email,
                 UserName = user.UserName
@@ -220,7 +223,7 @@ namespace EduHome.App.Controllers
             {
                 return NotFound();
             }
-            user.Name = model.UserName;
+            user.Name = model.Name;
             user.Surname = model.Surname;
             user.UserName = model.UserName;
             user.Email = model.Email;
@@ -247,7 +250,7 @@ namespace EduHome.App.Controllers
                 }
             }
             await _signinManager.SignInAsync(user, true);
-            TempData["Updateuser"] = "ok";
+            TempData["UserUpdate"] = "User info was updated succesfully";
             return RedirectToAction(nameof(Info));
         }
 
